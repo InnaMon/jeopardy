@@ -1,10 +1,10 @@
 import React from 'react';
 import './Category.css';
 
-const Category = () => {
+const Category = (props) => {
     return (
         <div className="category">
-            <p>Category</p>
+            <p>{props.children}</p>
         </div>
     )
 }
