@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Monjo FamBam Jeopardy!!!</h1>
+        <h1>Monjoseph Family Jeopardy!!!</h1>
         <div className="row">
           <Category>Mom</Category>
           <Category>Dad</Category>
