@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import Category from './components/Category/Category';
-import Card from './components/Card/Card'
-
+import Card from './components/Card/Card';
+import Modal from './components/Modal/Modal';
 import './App.css';
 
 class App extends Component {
-  modalHandler = () => {
-    alert("You clicked a question!");
+  state = {
+    showModal: false
   }
+
+  modalHandler = (e) => {
+    this.setState({showModal: !this.state.showModal});
+  }
+
+  // hideModal = () => {
+  //   this.setState({showModal: false})
+  // }
 
   render() {
     return (
@@ -21,7 +29,11 @@ class App extends Component {
           <Category>Random</Category>
         </div>
         <div className="row">
-          <Card>100</Card>
+          <Card handleModal={this.modalHandler}>
+            100
+            <Modal show={this.state.showModal} onClose={this.modalHandler}>Ask me a Question!</Modal>
+          </Card>
+
           <Card>100</Card>
           <Card>100</Card>
           <Card>100</Card>

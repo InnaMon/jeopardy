@@ -3,7 +3,7 @@ import './Card.css';
 
 const Card = (props) => {
     return (
-        <div className="card">
+        <div className="card" onClick={e => props.handleModal()}>
             <p>{props.children}</p>
         </div>
     )
