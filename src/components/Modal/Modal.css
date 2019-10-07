@@ -10,7 +10,9 @@
     top: 30%;
     border-radius: 15px;
     box-sizing: border-box;
-    transition: all 0.3s ease-out;
+    transition: all 2s ease-in;
+    /* transition: opacity 500ms ease-in;
+    transition: transform 400ms ease, opacity 400ms ease; */
     box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.79);
     -webkit-box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.79);
     -moz-box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.79);
