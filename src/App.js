@@ -13,10 +13,6 @@ class App extends Component {
     this.setState({showModal: !this.state.showModal});
   }
 
-  // hideModal = () => {
-  //   this.setState({showModal: false})
-  // }
-
   render() {
     return (
       <div className="App">
@@ -31,7 +27,11 @@ class App extends Component {
         <div className="row">
           <Card handleModal={this.modalHandler}>
             100
-            <Modal show={this.state.showModal} onClose={this.modalHandler}>Ask me a Question!</Modal>
+            <Modal show={this.state.showModal} onClose={this.modalHandler}>
+              <><h2>Mom: 100 pts</h2>
+                <p>Question about murm.</p>
+              </>
+            </Modal>
           </Card>
 
           <Card>100</Card>
