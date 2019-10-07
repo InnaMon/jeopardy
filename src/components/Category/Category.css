@@ -1,15 +1,16 @@
 .category {
     display: flex;
-    height: 4em;
+    /* height: 3em; */
     flex: 1;
     justify-content: center;
     align-items: center;
-    font-weight: lighter;
-    font-size: 1.6em;
+    /* font-weight: lighter; */
+    /* font-size: 1.6em; */
     background-color: #2d5bb9;
     color: white;
-    font-weight: 600;
+    /* font-weight: 600; */
     margin: 10px;
     border-radius: 10px;
     border: 3px solid #99b3e6;
+    box-sizing: border-box;
 }

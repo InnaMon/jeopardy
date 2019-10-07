@@ -2,14 +2,6 @@ import React, {Component } from "react";
 import './Modal.css'
 
 class Modal extends Component {
-    // UNSAFE_shouldComponentUpdate ( nextProps, nextState ) {
-    //     return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
-    // }
-
-    componentDidUpdate () {
-        console.log('[Modal] DidUpdate');
-    }
-
     onClose = e => {
         this.props.onClose && this.props.onClose(e);
     };

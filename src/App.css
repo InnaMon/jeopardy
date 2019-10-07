@@ -5,9 +5,29 @@
   src: local('Toony Medium'), url('Toony.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Amatic SC Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Amatic SC Regular'), url('AmaticSC-Regular.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Amatic SC Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Amatic SC Bold'), url('AmaticSC-Bold.woff') format('woff');
+}
+
+body, html {
+  font-family: 'Amatic SC Bold';
+  font-size: 1.4em;
+}
+
 h1 {
   font-family: 'Toony Medium';
-  font-size: 5em;
+  font-size: 2em;
   color: white;
   padding: 3px;
   margin-block-start: 0;
