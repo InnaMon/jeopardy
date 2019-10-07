@@ -9,11 +9,11 @@ function App() {
     <div className="App">
       <h1>Monjo FamBam Jeopardy!!!</h1>
       <div className="row">
-        <Category>Card</Category>
-        <Category>Card</Category>
-        <Category>Card</Category>
-        <Category>Card</Category>
-        <Category>Card</Category>
+        <Category>Mom</Category>
+        <Category>Dad</Category>
+        <Category>Kids</Category>
+        <Category>Name That Quote</Category>
+        <Category>Random</Category>
       </div>
       <div className="row">
         <Card>100</Card>
