@@ -1,0 +1,15 @@
+.category {
+    display: flex;
+    height: 4em;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    font-size: 1.4em;
+    background-color: #99b3e6;
+    color: white;
+    border: 3px solid #2d5bb9;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+}
