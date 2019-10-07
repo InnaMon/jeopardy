@@ -15,3 +15,12 @@
     -webkit-box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.79);
     -moz-box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.79);
 }
+
+.closeButton {
+    display: inline-block;
+    height: 40px;
+    width: 100px;
+    background-color: yellow;
+    border-radius: 20px;
+    border: none;
+}

@@ -13,7 +13,7 @@ class Modal extends Component {
       return (
         <div className="Modal">
             <div>{this.props.children}</div>
-            <button onClose={e => this.onClose(e)}>Close</button>
+            <button className="closeButton" onClose={e => this.onClose(e)}>Close</button>
         </div>
       )
     }
