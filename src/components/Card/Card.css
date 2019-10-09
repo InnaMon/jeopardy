@@ -7,7 +7,6 @@
     /* font-weight: lighter; */
     /* font-size: 1.4em; */
     color: white;
-    border: 3px solid #990033;
     cursor: pointer;
     margin: 10px;
     border-radius: 10px;
@@ -16,8 +15,10 @@
 
 .answeredCard {
     background-color: #808080;
+    border: 3px solid black;
 }
 
 .notAnsweredCard {
     background-color: #ff0066;
+    border: 3px solid #990033;
 }

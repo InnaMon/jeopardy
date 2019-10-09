@@ -7,14 +7,21 @@ class Modal extends Component {
     };
 
     render() {
-        if(!this.props.show) {
+        if(!this.props.showModal) { 
             return null;
         }
+
+        let answer = null;
+        if(this.props.showAnswer) {
+            answer = this.props.answer;
+        }
+
       return (
         <div className="Modal">
             <div>{this.props.children}</div>
+            {answer}
             <button className="closeButton" onClose={e => this.onClose(e)}>Close</button>
-            <button className="answerButton" onClick={this.props.answerButton}>Answer</button>
+            <button className="answerButton" onClick={e => this.props.answerButton(e)}>Answer</button>
         </div>
       )
     }

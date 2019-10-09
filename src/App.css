@@ -2,7 +2,7 @@
   font-family: 'Toony Medium';
   font-style: normal;
   font-weight: normal;
-  src: local('Toony Medium'), url('Toony.woff') format('woff');
+  src: local('Toony Medium'), url('Toony.woff') format('woff'); 
 }
 
 @font-face {

@@ -2,20 +2,25 @@ import React, { Component } from 'react';
 import Category from './components/Category/Category';
 import Card from './components/Card/Card';
 import Modal from './components/Modal/Modal';
-import './App.css';
+import './App.css'; 
 
 class App extends Component {
   state = {
     showModal: false,
-    answered: false
+    answered: false,
+    showAnswer: false
   }
 
   modalHandler = (e) => {
     this.setState({showModal: !this.state.showModal});
   }
 
-  questionAnswered = () => {
-    this.setState({answered: true})
+  showAnswerHandler = (e) => {
+    e.stopPropagation();
+    this.setState({
+      // answered: true,
+      showAnswer: true
+    })
   }
 
   render() {
@@ -32,8 +37,15 @@ class App extends Component {
         <div className="row">
           <Card handleModal={this.modalHandler} answered={this.state.answered}>
             100
-            <Modal show={this.state.showModal} onClose={this.modalHandler} answerButton={this.questionAnswered}>
-              <><h2>Mom: 100 pts</h2>
+            <Modal 
+              showModal={this.state.showModal} 
+              onClose={this.modalHandler} 
+              answerButton={this.showAnswerHandler}
+              showAnswer={this.state.showAnswer}
+              answer={<div>The answer is...</div>}
+            >
+              <>
+                <h2>Mom: 100 pts</h2>
                 <p>Question about murm.</p>
               </>
             </Modal>

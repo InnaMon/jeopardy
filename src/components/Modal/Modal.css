@@ -15,7 +15,7 @@
     transition: transform 400ms ease, opacity 400ms ease; */
     box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.79);
     -webkit-box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.79);
-    -moz-box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.79);
+    -moz-box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.79); 
 }
 
 .closeButton {
