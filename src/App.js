@@ -18,7 +18,7 @@ class App extends Component {
   showAnswerHandler = (e) => {
     e.stopPropagation();
     this.setState({
-      // answered: true,
+      answered: true,
       showAnswer: true
     })
   }
