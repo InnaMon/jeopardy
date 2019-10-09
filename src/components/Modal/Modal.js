@@ -1,4 +1,5 @@
 import React, {Component } from "react";
+import Timer from '../Timer/Timer';
 import './Modal.css'
 
 class Modal extends Component {
@@ -18,10 +19,14 @@ class Modal extends Component {
 
       return (
         <div className="Modal">
-            <div>{this.props.children}</div>
+            <div className="text">{this.props.children}
             {answer}
-            <button className="closeButton" onClose={e => this.onClose(e)}>Close</button>
-            <button className="answerButton" onClick={e => this.props.answerButton(e)}>Answer</button>
+            </div>
+            <Timer className="timer"/>
+            <div className="button">
+                <button className="closeButton" onClose={e => this.onClose(e)}>Close</button>
+                <button className="answerButton" onClick={e => this.props.answerButton(e)}>Answer</button>
+            </div>
         </div>
       )
     }

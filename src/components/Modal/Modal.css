@@ -1,5 +1,9 @@
 .Modal {
     position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    /* justify-content: center; */
     z-index: 500;
     background-color: #600080;
     width: 70%;
@@ -36,4 +40,19 @@
     border-radius: 20px;
     border: none;
     margin: 10px;
+}
+
+.text {
+    width: 50%;
+    margin: auto;
+}
+
+.timer {
+    width: 50%;
+    margin: auto;
+}
+
+.button {
+    width: 100%;
+    margin: auto;
 }
