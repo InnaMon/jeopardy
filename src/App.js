@@ -6,11 +6,16 @@ import './App.css';
 
 class App extends Component {
   state = {
-    showModal: false
+    showModal: false,
+    answered: false
   }
 
   modalHandler = (e) => {
     this.setState({showModal: !this.state.showModal});
+  }
+
+  questionAnswered = () => {
+    this.setState({answered: true})
   }
 
   render() {
@@ -25,9 +30,9 @@ class App extends Component {
           <Category>Random</Category>
         </div>
         <div className="row">
-          <Card handleModal={this.modalHandler}>
+          <Card handleModal={this.modalHandler} answered={this.state.answered}>
             100
-            <Modal show={this.state.showModal} onClose={this.modalHandler}>
+            <Modal show={this.state.showModal} onClose={this.modalHandler} answerButton={this.questionAnswered}>
               <><h2>Mom: 100 pts</h2>
                 <p>Question about murm.</p>
               </>
