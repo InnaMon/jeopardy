@@ -8,7 +8,10 @@ class App extends Component {
   state = {
     showModal: false,
     answered: false,
-    showAnswer: false
+    showAnswer: false,
+    timer: false,
+    sixtySeconds: 0,
+    timerStart: 0
   }
 
   modalHandler = (e) => {
@@ -22,7 +25,14 @@ class App extends Component {
       showAnswer: true
     })
   }
-
+  
+  startCountDown = () => {
+    this.setState({
+      timer: true,
+      sixtySeconds: 60,
+      timerStart: 0
+    })
+  }
   render() {
     return (
       <div className="App">
