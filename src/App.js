@@ -3,15 +3,16 @@ import Category from './components/Category/Category';
 import Card from './components/Card/Card';
 import Modal from './components/Modal/Modal';
 import './App.css'; 
+import Timer from './components/Timer/Timer';
 
 class App extends Component {
   state = {
     showModal: false,
     answered: false,
     showAnswer: false,
-    timer: false,
-    sixtySeconds: 0,
-    timerStart: 0
+    timerOn: false,
+    timerTime: 60
+    // timerStart: 0
   }
 
   modalHandler = (e) => {
@@ -28,11 +29,21 @@ class App extends Component {
   
   startCountDown = () => {
     this.setState({
-      timer: true,
-      sixtySeconds: 60,
-      timerStart: 0
-    })
+      timerOn: true,
+      timerTime: this.state.timerTime
+      // timerStart: Date.now() - this.state.timerTime
+    });
+    this.timer = setInterval(() => {
+      let newTime = this.state.timerTime - 1;
+      this.setState({
+        timerTime: newTime
+      })
+      if(newTime <= 0) {
+        clearInterval(this.timer);
+      }
+    }, 1000)
   }
+
   render() {
     return (
       <div className="App">
@@ -53,12 +64,15 @@ class App extends Component {
               answerButton={this.showAnswerHandler}
               showAnswer={this.state.showAnswer}
               answer={<div>The answer is...</div>}
+              timerTime={this.state.timerTime}
+              startTimer={this.startCountDown}
             >
               <>
                 <h2>Mom: 100 pts</h2>
                 <p>Question about murm.</p>
               </>
             </Modal>
+            <Timer startTime={this.startCountDown()}>{this.state.timerTime}</Timer>
           </Card>
 
           <Card>100</Card>

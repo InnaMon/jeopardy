@@ -1,9 +1,9 @@
 import React from 'react';
 import './Timer.css';
 
-const Timer = () => {
+const Timer = (props) => {
     return (
-        <div className="Timer">60</div>
+        <div className="Timer" startTimer={() => props.startTimer()}>{props.timerTime} seconds</div>
     )
 }
 
