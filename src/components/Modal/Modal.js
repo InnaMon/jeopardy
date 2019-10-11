@@ -22,7 +22,7 @@ class Modal extends Component {
             <div className="text">{this.props.children}
             {answer}
             </div>
-            <Timer className="timer" startTimer={this.startTimer} timerTime={this.props.timerTime}/>
+            <Timer className="timer" timerTime={this.props.timerTime} startTimer={this.props.startTimer}/>
             <div className="button">
                 <button className="closeButton" onClose={e => this.onClose(e)}>Close</button>
                 <button className="answerButton" onClick={e => this.props.answerButton(e)}>Answer</button>

@@ -16,7 +16,9 @@ class App extends Component {
   }
 
   modalHandler = (e) => {
-    this.setState({showModal: !this.state.showModal});
+    this.setState({
+      showModal: !this.state.showModal
+    });
   }
 
   showAnswerHandler = (e) => {
@@ -26,23 +28,27 @@ class App extends Component {
       showAnswer: true
     })
   }
+
+  // startTimer = () => {
+  //   this.timer = setInterval(this.countDown, 1000)
+  // }
   
-  startCountDown = () => {
-    this.setState({
-      timerOn: true,
-      timerTime: this.state.timerTime
-      // timerStart: Date.now() - this.state.timerTime
-    });
+  startTimer = () => {
     this.timer = setInterval(() => {
       let newTime = this.state.timerTime - 1;
-      this.setState({
-        timerTime: newTime
-      })
-      if(newTime <= 0) {
+      if (this.state.timerTime > 0) {
+        this.setState({
+          timerTime: newTime
+        })
+      } else {
         clearInterval(this.timer);
+        // e.stopPropagation();
+        // window.location.reload();
       }
     }, 1000)
   }
+
+  //write a reset function and inclide insdie the modalHandler function
 
   render() {
     return (
@@ -65,14 +71,13 @@ class App extends Component {
               showAnswer={this.state.showAnswer}
               answer={<div>The answer is...</div>}
               timerTime={this.state.timerTime}
-              startTimer={this.startCountDown}
+              startTimer={this.startTimer}
             >
               <>
                 <h2>Mom: 100 pts</h2>
                 <p>Question about murm.</p>
               </>
             </Modal>
-            <Timer startTime={this.startCountDown()}>{this.state.timerTime}</Timer>
           </Card>
 
           <Card>100</Card>
