@@ -12,7 +12,6 @@ class App extends Component {
     showAnswer: false,
     timerOn: false,
     timerTime: 60
-    // timerStart: 0
   }
 
   modalHandler = (e) => {
@@ -28,22 +27,33 @@ class App extends Component {
       showAnswer: true
     })
   }
-
-  // startTimer = () => {
-  //   this.timer = setInterval(this.countDown, 1000)
-  // }
   
+  // startTimer = () => {
+  //   this.timer = setInterval(() => {
+  //     let newTime = this.state.timerTime - 1;
+  //     if (this.state.timerTime > 0) {
+  //       this.setState({
+  //         timerOn: true,
+  //         timerTime: newTime
+  //       })
+  //     } else {
+  //       clearInterval(this.timer);
+  //       this.setState({timerOn: false})
+  //     }
+  //   }, 1000)
+  // }
+
   startTimer = () => {
-    this.timer = setInterval(() => {
+    this.timer = setTimeout(() => {
       let newTime = this.state.timerTime - 1;
       if (this.state.timerTime > 0) {
         this.setState({
+          timerOn: true,
           timerTime: newTime
         })
       } else {
         clearInterval(this.timer);
-        // e.stopPropagation();
-        // window.location.reload();
+        this.setState({timerOn: false})
       }
     }, 1000)
   }
@@ -70,13 +80,14 @@ class App extends Component {
               answerButton={this.showAnswerHandler}
               showAnswer={this.state.showAnswer}
               answer={<div>The answer is...</div>}
-              timerTime={this.state.timerTime}
-              startTimer={this.startTimer}
+              // timerTime={this.state.timerTime}
+              // startTimer={this.startTimer}
             >
               <>
                 <h2>Mom: 100 pts</h2>
                 <p>Question about murm.</p>
               </>
+              <Timer startTimer={this.startTimer} timerTime={this.state.timerTime}></Timer>
             </Modal>
           </Card>
 

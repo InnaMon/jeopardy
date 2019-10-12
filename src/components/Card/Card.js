@@ -6,7 +6,7 @@ class Card extends Component {
         return (
             <div 
             className={"card " + (!this.props.answered ? "notAnsweredCard" : "answeredCard")} 
-            onClick={e => this.props.handleModal()}>
+            onClick={e => this.props.handleModal(e)}>
             <p>{this.props.children}</p>
             </div>
         )
