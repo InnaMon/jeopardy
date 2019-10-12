@@ -3,14 +3,12 @@ import Category from './components/Category/Category';
 import Card from './components/Card/Card';
 import Modal from './components/Modal/Modal';
 import './App.css'; 
-import Timer from './components/Timer/Timer';
 
 class App extends Component {
   state = {
     showModal: false,
     answered: false,
     showAnswer: false,
-    timerOn: false,
     timerTime: 60
   }
 
@@ -18,13 +16,15 @@ class App extends Component {
     this.setState({
       showModal: !this.state.showModal
     });
+    this.resetCountDown();
   }
 
   showAnswerHandler = (e) => {
     e.stopPropagation();
     this.setState({
       answered: true,
-      showAnswer: true
+      showAnswer: true,
+      timerTime: 0
     })
   }
   
@@ -48,14 +48,16 @@ class App extends Component {
       let newTime = this.state.timerTime - 1;
       if (this.state.timerTime > 0) {
         this.setState({
-          timerOn: true,
           timerTime: newTime
         })
       } else {
         clearInterval(this.timer);
-        this.setState({timerOn: false})
       }
     }, 1000)
+  }
+
+  resetCountDown = () => {
+    this.setState({timerTime: 60})
   }
 
   //write a reset function and inclide insdie the modalHandler function
@@ -80,14 +82,13 @@ class App extends Component {
               answerButton={this.showAnswerHandler}
               showAnswer={this.state.showAnswer}
               answer={<div>The answer is...</div>}
-              // timerTime={this.state.timerTime}
-              // startTimer={this.startTimer}
+              timerTime={this.state.timerTime}
+              startTimer={this.startTimer}
             >
               <>
                 <h2>Mom: 100 pts</h2>
                 <p>Question about murm.</p>
               </>
-              <Timer startTimer={this.startTimer} timerTime={this.state.timerTime}></Timer>
             </Modal>
           </Card>
 
