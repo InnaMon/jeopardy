@@ -27,21 +27,6 @@ class App extends Component {
       timerTime: 0
     })
   }
-  
-  // startTimer = () => {
-  //   this.timer = setInterval(() => {
-  //     let newTime = this.state.timerTime - 1;
-  //     if (this.state.timerTime > 0) {
-  //       this.setState({
-  //         timerOn: true,
-  //         timerTime: newTime
-  //       })
-  //     } else {
-  //       clearInterval(this.timer);
-  //       this.setState({timerOn: false})
-  //     }
-  //   }, 1000)
-  // }
 
   startTimer = () => {
     this.timer = setTimeout(() => {
@@ -60,8 +45,6 @@ class App extends Component {
     this.setState({timerTime: 60})
   }
 
-  //write a reset function and inclide insdie the modalHandler function
-
   render() {
     return (
       <div className="App">
@@ -69,8 +52,8 @@ class App extends Component {
         <div className="row">
           <Category>Mom</Category>
           <Category>Dad</Category>
-          <Category>Kids</Category>
-          <Category>Name That Quote</Category>
+          <Category>Lily</Category>
+          <Category>Name That Wedding</Category>
           <Category>Random</Category>
         </div>
         <div className="row">

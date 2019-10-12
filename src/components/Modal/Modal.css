@@ -3,43 +3,45 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    /* justify-content: center; */
     z-index: 500;
     background-color: #600080;
     width: 70%;
-    /* border: 4px solid #ffff00; */
-    /* box-shadow: 1px 1px 1px black; */
     padding: 16px;
     left: 15%;
     top: 30%;
     border-radius: 15px;
     box-sizing: border-box;
     transition: all 2s ease-in;
-    /* transition: opacity 500ms ease-in;
-    transition: transform 400ms ease, opacity 400ms ease; */
     box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.79);
     -webkit-box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.79);
     -moz-box-shadow: 10px 10px 50px 2px rgba(0,0,0,0.79); 
+    cursor: default;
 }
 
 .closeButton {
     display: inline-block;
-    height: 40px;
+    height: 50px;
     width: 100px;
     background-color: yellow;
     border-radius: 20px;
     border: none;
     margin: 10px;
+    font-family: 'Amatic SC Bold';
+    font-size: 1em;
+    cursor: pointer;
 }
 
 .answerButton {
     display: inline-block;
-    height: 40px;
+    height: 50px;
     width: 100px;
     background-color: orange;
     border-radius: 20px;
     border: none;
     margin: 10px;
+    font-family: 'Amatic SC Bold';
+    font-size: 1em;
+    cursor: pointer;
 }
 
 .text {
