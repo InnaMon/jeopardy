@@ -28,6 +28,8 @@ class App extends Component {
     }
   }
 
+  //TO DO: ADD A UNIQUE ID TO EACH MODAL SO THAT ONLY ONE MODAL IS TRIGGERED AT A GIVEN TIME 
+
   showAnswerHandler = (e) => {
     e.stopPropagation();
     this.setState({
