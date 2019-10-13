@@ -12,11 +12,20 @@ class App extends Component {
     timerTime: 60
   }
 
-  modalHandler = (e) => {
-    this.setState({
-      showModal: !this.state.showModal
-    });
-    this.resetCountDown();
+  // modalHandler = (e) => {
+  //   this.setState({
+  //     showModal: !this.state.showModal
+  //   });
+  //   this.resetCountDown();
+  // }
+
+  modalHandler = (props) => {
+    if (props.id === this.props.id) {
+      this.setState({
+        showModal: !this.state.showModal
+      });
+      this.resetCountDown();
+    }
   }
 
   showAnswerHandler = (e) => {
@@ -49,6 +58,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Monjoseph Family Jeopardy!!!</h1>
+
         <div className="row">
           <Category>Mom</Category>
           <Category>Dad</Category>
@@ -56,10 +66,13 @@ class App extends Component {
           <Category>Name That Wedding</Category>
           <Category>Random</Category>
         </div>
+
         <div className="row">
           <Card handleModal={this.modalHandler} answered={this.state.answered}>
             100
+            <div>
             <Modal 
+              id="1"
               showModal={this.state.showModal} 
               onClose={this.modalHandler} 
               answerButton={this.showAnswerHandler}
@@ -73,13 +86,83 @@ class App extends Component {
                 <p>Question about murm.</p>
               </>
             </Modal>
+            </div>
           </Card>
 
-          <Card>100</Card>
-          <Card>100</Card>
-          <Card>100</Card>
-          <Card>100</Card>
+          <Card handleModal={this.modalHandler} answered={this.state.answered}>
+            100
+            <Modal 
+              showModal={this.state.showModal} 
+              onClose={this.modalHandler} 
+              answerButton={this.showAnswerHandler}
+              showAnswer={this.state.showAnswer}
+              answer={<div>The answer is...</div>}
+              timerTime={this.state.timerTime}
+              startTimer={this.startTimer}
+            >
+              <>
+                <h2>Dad: 100 pts</h2>
+                <p>Question about murm.</p>
+              </>
+            </Modal>
+          </Card>
+
+          <Card handleModal={this.modalHandler} answered={this.state.answered}>
+            100
+            <Modal 
+              showModal={this.state.showModal} 
+              onClose={this.modalHandler} 
+              answerButton={this.showAnswerHandler}
+              showAnswer={this.state.showAnswer}
+              answer={<div>The answer is...</div>}
+              timerTime={this.state.timerTime}
+              startTimer={this.startTimer}
+            >
+              <>
+                <h2>Lily: 100 pts</h2>
+                <p>Question about murm.</p>
+              </>
+            </Modal>
+          </Card>
+
+          <Card handleModal={this.modalHandler} answered={this.state.answered}>
+            100
+            <Modal 
+              showModal={this.state.showModal} 
+              onClose={this.modalHandler} 
+              answerButton={this.showAnswerHandler}
+              showAnswer={this.state.showAnswer}
+              answer={<div>The answer is...</div>}
+              timerTime={this.state.timerTime}
+              startTimer={this.startTimer}
+            >
+              <>
+                <h2>Name That Wedding: 100 pts</h2>
+                <p>Question about murm.</p>
+              </>
+            </Modal>
+          </Card>
+
+          <Card handleModal={this.modalHandler} answered={this.state.answered}>
+            100
+            <Modal 
+              showModal={this.state.showModal} 
+              onClose={this.modalHandler} 
+              answerButton={this.showAnswerHandler}
+              showAnswer={this.state.showAnswer}
+              answer={<div>The answer is...</div>}
+              timerTime={this.state.timerTime}
+              startTimer={this.startTimer}
+            >
+              <>
+                <h2>Random</h2>
+                <p>Question about murm.</p>
+              </>
+            </Modal>
+          </Card> 
+
         </div>
+
         <div className="row">
           <Card>200</Card>
           <Card>200</Card>
