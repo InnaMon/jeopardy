@@ -19,7 +19,10 @@ class Modal extends Component {
 
       return (
         <div className="Modal">
-            <div className="text">{this.props.children}
+            <div className="text">
+            {this.props.children}
+            {this.props.header}
+            {this.props.question}
             {answer}
             </div>
             <Timer className="timer" startTimer={this.props.startTimer} timerTime={this.props.timerTime}/>

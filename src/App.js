@@ -12,21 +12,21 @@ class App extends Component {
     timerTime: 60
   }
 
-  // modalHandler = (e) => {
-  //   this.setState({
-  //     showModal: !this.state.showModal
-  //   });
-  //   this.resetCountDown();
-  // }
-
-  modalHandler = (answer) => {
-    if (answer === this.props.answer) {
-      this.setState({
-        showModal: !this.state.showModal
-      });
-      this.resetCountDown();
-    }
+  modalHandler = (e) => {
+    this.setState({
+      showModal: !this.state.showModal
+    });
+    this.resetCountDown();
   }
+
+  // modalHandler = (answer) => {
+  //   if (answer === this.props.answer) {
+  //     this.setState({
+  //       showModal: !this.state.showModal
+  //     });
+  //     this.resetCountDown();
+  //   }
+  // }
 
   //TO DO: ADD A UNIQUE ID TO EACH MODAL SO THAT ONLY ONE MODAL IS TRIGGERED AT A GIVEN TIME 
   // https://hub.packtpub.com/creating-reusable-generic-modals-react-and-redux/
@@ -73,7 +73,7 @@ class App extends Component {
         <div className="row">
           <Card handleModal={this.modalHandler} answered={this.state.answered}>
             100
-            <div>
+            {/* <div>
             <Modal 
               showModal={this.state.showModal} 
               onClose={this.modalHandler} 
@@ -88,12 +88,12 @@ class App extends Component {
                 <p>Question about murm.</p>
               </>
             </Modal>
-            </div>
+            </div> */}
           </Card>
 
-          <Card handleModal={this.modalHandler} answered={this.state.answered}>
-            100
-            <Modal 
+          <Card
+              handleModal={this.modalHandler} 
+              answered={this.state.answered}
               showModal={this.state.showModal} 
               onClose={this.modalHandler} 
               answerButton={this.showAnswerHandler}
@@ -101,17 +101,15 @@ class App extends Component {
               answer={<div>The answer is...</div>}
               timerTime={this.state.timerTime}
               startTimer={this.startTimer}
+              header={<h2>Dad: 100 pts</h2>}
+              question={<p>Question about dad.</p>}
             >
-              <>
-                <h2>Dad: 100 pts</h2>
-                <p>Question about murm.</p>
-              </>
-            </Modal>
+            100
           </Card>
 
-          <Card handleModal={this.modalHandler} answered={this.state.answered}>
-            100
-            <Modal 
+          <Card
+              handleModal={this.modalHandler} 
+              answered={this.state.answered}
               showModal={this.state.showModal} 
               onClose={this.modalHandler} 
               answerButton={this.showAnswerHandler}
@@ -119,48 +117,18 @@ class App extends Component {
               answer={<div>The answer is...</div>}
               timerTime={this.state.timerTime}
               startTimer={this.startTimer}
-            >
-              <>
-                <h2>Lily: 100 pts</h2>
-                <p>Question about murm.</p>
-              </>
-            </Modal>
+              header={<h2>Lily: 100 pts</h2>}
+              question={<p>Question about Lily.</p>}
+          >
+            100
           </Card>
 
-          <Card handleModal={this.modalHandler} answered={this.state.answered}>
+          <Card>
             100
-            <Modal 
-              showModal={this.state.showModal} 
-              onClose={this.modalHandler} 
-              answerButton={this.showAnswerHandler}
-              showAnswer={this.state.showAnswer}
-              answer={<div>The answer is...</div>}
-              timerTime={this.state.timerTime}
-              startTimer={this.startTimer}
-            >
-              <>
-                <h2>Name That Wedding: 100 pts</h2>
-                <p>Question about murm.</p>
-              </>
-            </Modal>
           </Card>
 
-          <Card handleModal={this.modalHandler} answered={this.state.answered}>
+          <Card>
             100
-            <Modal 
-              showModal={this.state.showModal} 
-              onClose={this.modalHandler} 
-              answerButton={this.showAnswerHandler}
-              showAnswer={this.state.showAnswer}
-              answer={<div>The answer is...</div>}
-              timerTime={this.state.timerTime}
-              startTimer={this.startTimer}
-            >
-              <>
-                <h2>Random</h2>
-                <p>Question about murm.</p>
-              </>
-            </Modal>
           </Card> 
 
         </div>

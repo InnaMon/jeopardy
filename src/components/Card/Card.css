@@ -1,11 +1,11 @@
 .card {
     display: flex;
-    /* height: 4em; */
+    height: 4em;
     flex: 1;
     justify-content: center;
     align-items: center;
     /* font-weight: lighter; */
-    /* font-size: 1.4em; */
+    font-size: 0.75em;
     color: white;
     cursor: pointer;
     margin: 10px;
