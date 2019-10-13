@@ -19,8 +19,8 @@ class App extends Component {
   //   this.resetCountDown();
   // }
 
-  modalHandler = (props) => {
-    if (props.id === this.props.id) {
+  modalHandler = (answer) => {
+    if (answer === this.props.answer) {
       this.setState({
         showModal: !this.state.showModal
       });
@@ -29,6 +29,7 @@ class App extends Component {
   }
 
   //TO DO: ADD A UNIQUE ID TO EACH MODAL SO THAT ONLY ONE MODAL IS TRIGGERED AT A GIVEN TIME 
+  // https://hub.packtpub.com/creating-reusable-generic-modals-react-and-redux/
 
   showAnswerHandler = (e) => {
     e.stopPropagation();
@@ -74,7 +75,6 @@ class App extends Component {
             100
             <div>
             <Modal 
-              id="1"
               showModal={this.state.showModal} 
               onClose={this.modalHandler} 
               answerButton={this.showAnswerHandler}
