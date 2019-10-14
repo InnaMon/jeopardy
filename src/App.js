@@ -7,11 +7,36 @@ import './App.css';
 class App extends Component {
   state = {
     cards: [
-      {title: '100'},
-      {title: '200'},
-      {title: '300'},
-      {title: '400'},
-      {title: '500'}
+      {
+        title: '100',
+        modalHeader: 'Mom: 100 pts',
+        question: 'What is Moms favorite color?',
+        answer: 'All shades of green'
+      },
+      {
+        title: '200',
+        modalHeader: 'Mom: 200 pts',
+        question: 'What year did mom enrolls to NCC?',
+        answer: '2008'
+      },
+      {
+        title: '300',
+        modalHeader: 'Mom: 300 pts',
+        question: 'What are the names of grandparents that raised mom',
+        answer: 'Grandma Polya and grandpa Peter'
+      },
+      {
+        title: '400',
+        modalHeader: 'Mom: 400 pts',
+        question: 'Who did mom work as in Russia?',
+        answer: 'Приома Здачя'
+      },
+      {
+        title: '500',
+        modalHeader: 'Mom: 500 pts',
+        question: 'Mom’s favorite author/book?',
+        answer: 'Кристина Рой Дорогой ценой'
+      }
     ],
     showModal: false,
     answered: false,
@@ -67,8 +92,19 @@ class App extends Component {
   render() {
     const cards = this.state.cards.map((card, i) => {
       return <Card
-      key={i}
-      title={this.state.cards[i].title} />
+      key={Math.floor(Math.random(i + 5))}
+      title={this.state.cards[i].title}
+      modalHeader={this.state.cards[i].modalHeader}
+      question={this.state.cards[i].question}
+      answer={this.state.cards[i].answer} 
+      handleModal={this.modalHandler} 
+      answered={this.state.answered}
+      showModal={this.state.showModal}
+      answerButton={this.showAnswerHandler}
+      showAnswer={this.state.showAnswer}
+      timerTime={this.state.timerTime}
+      startTimer={this.startTimer}
+      />
     })
     return (
       <div className="App">
