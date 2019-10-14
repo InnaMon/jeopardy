@@ -7,16 +7,20 @@ class Card extends Component {
         return (
             <div 
             className={"card " + (!this.props.answered ? "notAnsweredCard" : "answeredCard")} 
-            onClick={e => this.props.handleModal(e)}>
+            // onClick={e => this.props.handleModal(this.props.key)}
+            showModal={this.props.showModal}
+            onClick={() => this.props.showModalHandler(this.props.key)}>
             <p>{this.props.title}</p>
             <Modal 
+              key={this.props.key}
               showModal={this.props.showModal} 
-              onClose={this.props.onClose}
+              hideModal={this.props.hideModal}
+            //   onClose={this.props.onClose}
               header={this.props.header}
               question={this.props.question} 
+              answer={this.props.answer}
               answerButton={this.props.answerButton}
               showAnswer={this.props.showAnswer}
-              answer={this.props.answer}
               timerTime={this.props.timerTime}
               startTimer={this.props.startTimer}
             >

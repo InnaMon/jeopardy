@@ -11,45 +11,78 @@ class App extends Component {
         title: '100',
         modalHeader: 'Mom: 100 pts',
         question: 'What is Moms favorite color?',
-        answer: 'All shades of green'
+        answer: 'All shades of green',
+        id: 1
       },
       {
         title: '200',
         modalHeader: 'Mom: 200 pts',
         question: 'What year did mom enrolls to NCC?',
-        answer: '2008'
+        answer: '2008',
+        id: 2
       },
       {
         title: '300',
         modalHeader: 'Mom: 300 pts',
         question: 'What are the names of grandparents that raised mom',
-        answer: 'Grandma Polya and grandpa Peter'
+        answer: 'Grandma Polya and grandpa Peter',
+        id: 3
       },
       {
         title: '400',
         modalHeader: 'Mom: 400 pts',
         question: 'Who did mom work as in Russia?',
-        answer: 'Приома Здачя'
+        answer: 'Приома Здачя',
+        id: 4
       },
       {
         title: '500',
         modalHeader: 'Mom: 500 pts',
         question: 'Mom’s favorite author/book?',
-        answer: 'Кристина Рой Дорогой ценой'
+        answer: 'Кристина Рой Дорогой ценой',
+        id: 5
       }
     ],
     showModal: false,
+    dataModel: {
+      name: ""
+    },
     answered: false,
     showAnswer: false,
     timerTime: 60
   }
 
-  modalHandler = (e) => {
+  showModalHandler = key => {
     this.setState({
-      showModal: !this.state.showModal
+      showModal: true,
+      dataModel: key
+    });
+  }
+
+  hideModalHandler = (e) => {
+    e.stopPropagation();
+    this.setState({
+      showModal: false
     });
     this.resetCountDown();
   }
+
+  // showModalHandler = key => {
+  //   let key_to_update = {};
+  //   key_to_update[key] = true;
+  //   this.setState({
+  //     showModal: Object.assign( {}, this.state.showModal, key_to_update)
+  //   });
+  // }
+
+  // hideModalHandler = (key) => {
+  //   let key_to_update = {};
+  //   key_to_update[key] = false;
+  //   this.setState({
+  //     showModal: Object.assign( {}, this.state.showModal, key_to_update)
+  //   });
+  //   this.resetCountDown();
+  // }
 
   // modalHandler = (answer) => {
   //   if (answer === this.props.answer) {
@@ -92,14 +125,16 @@ class App extends Component {
   render() {
     const cards = this.state.cards.map((card, i) => {
       return <Card
-      key={Math.floor(Math.random(i + 5))}
       title={this.state.cards[i].title}
       modalHeader={this.state.cards[i].modalHeader}
       question={this.state.cards[i].question}
-      answer={this.state.cards[i].answer} 
-      handleModal={this.modalHandler} 
-      answered={this.state.answered}
+      answer={this.state.cards[i].answer}
+      key={this.state.cards[i].id} 
+      // handleModal={this.modalHandler} 
       showModal={this.state.showModal}
+      showModalHandler = {this.showModalHandler}
+      hideModal = {this.hideModalHandler}
+      answered={this.state.answered}
       answerButton={this.showAnswerHandler}
       showAnswer={this.state.showAnswer}
       timerTime={this.state.timerTime}
@@ -123,16 +158,32 @@ class App extends Component {
             {cards}
           </div>
           <div className="column">
-            {cards}
+          <Card>200</Card>
+          <Card>200</Card>
+          <Card>200</Card>
+          <Card>200</Card>
+          <Card>200</Card>
           </div>
           <div className="column">
-            {cards}
+          <Card>200</Card>
+          <Card>200</Card>
+          <Card>200</Card>
+          <Card>200</Card>
+          <Card>200</Card>
           </div>
           <div className="column">
-            {cards}
+          <Card>200</Card>
+          <Card>200</Card>
+          <Card>200</Card>
+          <Card>200</Card>
+          <Card>200</Card>
           </div>
           <div className="column">
-            {cards}
+          <Card>200</Card>
+          <Card>200</Card>
+          <Card>200</Card>
+          <Card>200</Card>
+          <Card>200</Card>
           </div>
         </div>
 

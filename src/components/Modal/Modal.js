@@ -3,14 +3,18 @@ import Timer from '../Timer/Timer';
 import './Modal.css'
 
 class Modal extends Component {
-    onClose = e => {
-        this.props.onClose && this.props.onClose(e);
-    };
+    // onClose = e => {
+    //     this.props.hideModal && this.props.hideModal();
+    // };
+
+    // onClose = key => {
+    //     this.props.showModal && this.props.hideModal(key);
+    // };
 
     render() {
-        if(!this.props.showModal) { 
-            return null;
-        }
+        // if(!this.props.showModal) { 
+        //     return null;
+        // }
 
         let answer = null;
         if(this.props.showAnswer) {
@@ -18,19 +22,23 @@ class Modal extends Component {
         }
 
       return (
+        this.props.showModal ? 
         <div className="Modal">
             <div className="text">
-            {this.props.children}
+            {/* {this.props.children} */}
             {this.props.header}
             {this.props.question}
             {answer}
             </div>
-            <Timer className="timer" startTimer={this.props.startTimer} timerTime={this.props.timerTime}/>
+            <div className="timer">
+                <Timer startTimer={this.props.startTimer} timerTime={this.props.timerTime}/>
+            </div>
             <div className="button">
-                <button className="closeButton" onClose={e => this.onClose(e)}>Close</button>
+                {/* <button className="closeButton" onClose={e => this.onClose(e)}>Close</button> */}
+                <button className="closeButton" onClick={e => this.props.hideModal(e)} showModal = {this.props.showModal} >Close</button>
                 <button className="answerButton" onClick={e => this.props.answerButton(e)}>Answer</button>
             </div>
-        </div>
+        </div> : null
       )
     }
 }
