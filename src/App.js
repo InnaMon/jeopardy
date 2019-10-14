@@ -6,6 +6,13 @@ import './App.css';
 
 class App extends Component {
   state = {
+    cards: [
+      {title: '100'},
+      {title: '200'},
+      {title: '300'},
+      {title: '400'},
+      {title: '500'}
+    ],
     showModal: false,
     answered: false,
     showAnswer: false,
@@ -58,6 +65,11 @@ class App extends Component {
   }
 
   render() {
+    const cards = this.state.cards.map((card, i) => {
+      return <Card
+      key={i}
+      title={this.state.cards[i].title} />
+    })
     return (
       <div className="App">
         <h1>Monjoseph Family Jeopardy!!!</h1>
@@ -71,9 +83,27 @@ class App extends Component {
         </div>
 
         <div className="row">
+          <div className="column">
+            {cards}
+          </div>
+          <div className="column">
+            {cards}
+          </div>
+          <div className="column">
+            {cards}
+          </div>
+          <div className="column">
+            {cards}
+          </div>
+          <div className="column">
+            {cards}
+          </div>
+        </div>
+
+        {/* <div className="row">
           <Card handleModal={this.modalHandler} answered={this.state.answered}>
             100
-            {/* <div>
+            <div>
             <Modal 
               showModal={this.state.showModal} 
               onClose={this.modalHandler} 
@@ -88,7 +118,7 @@ class App extends Component {
                 <p>Question about murm.</p>
               </>
             </Modal>
-            </div> */}
+            </div>
           </Card>
 
           <Card
@@ -107,19 +137,7 @@ class App extends Component {
             100
           </Card>
 
-          <Card
-              handleModal={this.modalHandler} 
-              answered={this.state.answered}
-              showModal={this.state.showModal} 
-              onClose={this.modalHandler} 
-              answerButton={this.showAnswerHandler}
-              showAnswer={this.state.showAnswer}
-              answer={<div>The answer is...</div>}
-              timerTime={this.state.timerTime}
-              startTimer={this.startTimer}
-              header={<h2>Lily: 100 pts</h2>}
-              question={<p>Question about Lily.</p>}
-          >
+          <Card>
             100
           </Card>
 
@@ -131,36 +149,15 @@ class App extends Component {
             100
           </Card> 
 
-        </div>
+        </div> */}
 
-        <div className="row">
+        {/* <div className="row">
           <Card>200</Card>
           <Card>200</Card>
           <Card>200</Card>
           <Card>200</Card>
           <Card>200</Card>
-        </div>
-        <div className="row">
-          <Card>300</Card>
-          <Card>300</Card>
-          <Card>300</Card>
-          <Card>300</Card>
-          <Card>300</Card>
-        </div>
-        <div className="row">
-          <Card>400</Card>
-          <Card>400</Card>
-          <Card>400</Card>
-          <Card>400</Card>
-          <Card>400</Card>
-        </div>
-        <div className="row">
-          <Card>500</Card>
-          <Card>500</Card>
-          <Card>500</Card>
-          <Card>500</Card>
-          <Card>500</Card>
-        </div>
+        </div> */}
       </div>
     );
   }
