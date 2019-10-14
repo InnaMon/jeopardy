@@ -12,35 +12,35 @@ class App extends Component {
         modalHeader: 'Mom: 100 pts',
         question: 'What is Moms favorite color?',
         answer: 'All shades of green',
-        id: 1
+        id: 0
       },
       {
         title: '200',
         modalHeader: 'Mom: 200 pts',
         question: 'What year did mom enrolls to NCC?',
         answer: '2008',
-        id: 2
+        id: 1
       },
       {
         title: '300',
         modalHeader: 'Mom: 300 pts',
         question: 'What are the names of grandparents that raised mom',
         answer: 'Grandma Polya and grandpa Peter',
-        id: 3
+        id: 2
       },
       {
         title: '400',
         modalHeader: 'Mom: 400 pts',
         question: 'Who did mom work as in Russia?',
         answer: 'Приома Здачя',
-        id: 4
+        id: 3
       },
       {
         title: '500',
         modalHeader: 'Mom: 500 pts',
         question: 'Mom’s favorite author/book?',
         answer: 'Кристина Рой Дорогой ценой',
-        id: 5
+        id: 4
       }
     ],
     showModal: false,
@@ -52,11 +52,11 @@ class App extends Component {
     timerTime: 60
   }
 
-  showModalHandler = key => {
+  showModalHandler = value => {
     this.setState({
-      showModal: true,
-      dataModel: key
+      showModal: true
     });
+    this.resetCountDown();
   }
 
   hideModalHandler = (e) => {
@@ -64,7 +64,7 @@ class App extends Component {
     this.setState({
       showModal: false
     });
-    this.resetCountDown();
+    // this.resetCountDown();
   }
 
   // showModalHandler = key => {
@@ -122,14 +122,17 @@ class App extends Component {
     this.setState({timerTime: 60})
   }
 
+  // TO DO: assess this code https://codesandbox.io/s/pkjvy72mw0
+
   render() {
     const cards = this.state.cards.map((card, i) => {
       return <Card
+      key={this.state.cards[i]}
       title={this.state.cards[i].title}
       modalHeader={this.state.cards[i].modalHeader}
       question={this.state.cards[i].question}
       answer={this.state.cards[i].answer}
-      key={this.state.cards[i].id} 
+      id={this.state.cards[i].id} 
       // handleModal={this.modalHandler} 
       showModal={this.state.showModal}
       showModalHandler = {this.showModalHandler}

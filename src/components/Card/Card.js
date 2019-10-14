@@ -9,7 +9,7 @@ class Card extends Component {
             className={"card " + (!this.props.answered ? "notAnsweredCard" : "answeredCard")} 
             // onClick={e => this.props.handleModal(this.props.key)}
             showModal={this.props.showModal}
-            onClick={() => this.props.showModalHandler(this.props.key)}>
+            onClick={() => this.props.showModalHandler(this.props.id)}>
             <p>{this.props.title}</p>
             <Modal 
               key={this.props.key}
