@@ -4,12 +4,12 @@ import './Card.css';
 
 class Card extends Component {
     render() {
+        console.log('Card comp props', this.props);
         return (
             <div 
             className={"card " + (!this.props.answered ? "notAnsweredCard" : "answeredCard")} 
-            // onClick={e => this.props.handleModal(this.props.key)}
-            onClick={() => this.props.showModalHandler(this.props.id)}
-            showModal={this.props.showModal === this.props.id}>
+            // showModal={this.props.showModal === this.props.id}
+            onClick={() => this.props.showModalHandler(this.props.id)}>
             <p>{this.props.title}</p>
             <Modal 
               id={this.props.id}

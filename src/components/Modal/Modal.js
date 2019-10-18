@@ -25,20 +25,24 @@ class Modal extends Component {
       return (
         this.props.showModal ?
         <div className="Modal">
+
             <div className="text">
-            <h1>{this.props.header}</h1>
-            <p>{this.props.question}</p>
-            <p>{answer}</p>
+                <h1>{this.props.header}</h1>
+                <p>{this.props.question}</p>
+                <p>{answer}</p>
             </div>
+
             <div className="timer">
                 <Timer startTimer={this.props.startTimer} timerTime={this.props.timerTime}/>
             </div>
+
             <div className="button">
                 {/* <button className="closeButton" onClose={e => this.onClose(e)}>Close</button> */}
                 {/* <button className="closeButton" onClick={() => this.props.hideModal(this.props.id)} showModal = {this.props.showModal === this.props.id} >Close</button> */}
-                <button className="closeButton" onClick={() => this.props.hideModal()} showModal={this.props.showModal}>Close</button>
+                <button className="closeButton" onClick={() => this.props.hideModal(this.props.id)} >Close</button>
                 <button className="answerButton" onClick={e => this.props.answerButton(e)}>Answer</button>
             </div>
+
         </div> : null
       )
     }

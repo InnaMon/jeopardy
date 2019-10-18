@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Category from './components/Category/Category';
 import Card from './components/Card/Card';
-import Modal from './components/Modal/Modal';
 import './App.css'; 
 
 class App extends Component {
@@ -56,7 +55,7 @@ class App extends Component {
     this.resetCountDown();
   }
 
-  hideModalHandler = () => {
+  hideModalHandler = value => {
     // e.stopPropagation();
     this.setState({
       showModal: 0
@@ -114,6 +113,7 @@ class App extends Component {
     // })
 
     const cards = this.state.cards.map((card, i) => {
+      console.log('card', card);
       return <Card
       key={i}
       title={card.title}
