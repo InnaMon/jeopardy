@@ -60,14 +60,6 @@ class App extends Component {
   //     }
   // }
 
-  // shouldComponentUpdate ( nextProps, nextState ) {
-  //   if (this.state === nextState ) {
-  //       return false;
-  //     } else {
-  //       return true;
-  //     }
-  // }
-
   // componentDidUpdate () {
   //   console.log('[App] DidUpdate');
   // }
@@ -78,13 +70,6 @@ class App extends Component {
     });
     this.resetCountDown();
   }
-
-  // hideModalHandler = value => {
-  //   this.setState({
-  //     showModal: 0
-  //   });
-  //   console.log('close modal');
-  // }
 
   hideModalHandler = e => {
     e.stopPropagation()
@@ -122,6 +107,7 @@ class App extends Component {
   }
 
   // TO DO: assess this code https://codesandbox.io/s/pkjvy72mw0
+  // RESOURCES: https://stackoverflow.com/questions/54276832/react-how-to-display-a-modal-popup-only-for-that-specific-div
 
   render() {
 

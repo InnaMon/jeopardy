@@ -27,7 +27,11 @@ class Modal extends Component {
       return (
         this.props.showModal ?
         <div className="Modal">
+        
+            <div className="header">
             <h1>{this.props.modalHeader}</h1>
+            </div>
+
             <div className="text">
                 <p>{this.props.question}</p>
                 <p>{answer}</p>
