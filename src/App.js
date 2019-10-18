@@ -48,6 +48,30 @@ class App extends Component {
     timerTime: 60
   }
 
+  // shouldComponentUpdate ( nextProps, nextState ) {
+  //   if (this.state.cards === nextState.cards &&
+  //     this.state.showModal === nextState.showModal &&
+  //     this.state.answered === nextState.answered &&
+  //     this.state.showAnswer === nextState.showAnswer &&
+  //     this.state.timerTime !== nextState.timerTime) {
+  //       return false;
+  //     } else {
+  //       return true;
+  //     }
+  // }
+
+  // shouldComponentUpdate ( nextProps, nextState ) {
+  //   if (this.state === nextState ) {
+  //       return false;
+  //     } else {
+  //       return true;
+  //     }
+  // }
+
+  // componentDidUpdate () {
+  //   console.log('[App] DidUpdate');
+  // }
+
   showModalHandler = value => {
     this.setState({
       showModal: value
@@ -55,12 +79,20 @@ class App extends Component {
     this.resetCountDown();
   }
 
-  hideModalHandler = value => {
-    // e.stopPropagation();
+  // hideModalHandler = value => {
+  //   this.setState({
+  //     showModal: 0
+  //   });
+  //   console.log('close modal');
+  // }
+
+  hideModalHandler = e => {
+    e.stopPropagation()
     this.setState({
       showModal: 0
     });
     // this.resetCountDown();
+    console.log('close modal');
   }
 
   showAnswerHandler = (e) => {
@@ -92,25 +124,6 @@ class App extends Component {
   // TO DO: assess this code https://codesandbox.io/s/pkjvy72mw0
 
   render() {
-    // const cards = this.state.cards.map((card, i) => {
-    //   return <Card
-    //   key={this.state.cards[i]}
-    //   title={this.state.cards[i].title}
-    //   modalHeader={this.state.cards[i].modalHeader}
-    //   question={this.state.cards[i].question}
-    //   answer={this.state.cards[i].answer}
-    //   id={this.state.cards[i].id} 
-    //   // handleModal={this.modalHandler} 
-    //   showModal={this.state.showModal}
-    //   showModalHandler = {this.showModalHandler}
-    //   hideModal = {this.hideModalHandler}
-    //   answered={this.state.answered}
-    //   answerButton={this.showAnswerHandler}
-    //   showAnswer={this.state.showAnswer}
-    //   timerTime={this.state.timerTime}
-    //   startTimer={this.startTimer}
-    //   />
-    // })
 
     const cards = this.state.cards.map((card, i) => {
       console.log('card', card);
@@ -121,8 +134,8 @@ class App extends Component {
       question={card.question}
       answer={card.answer}
       id={card.id} 
-      showModal={this.state.showModal}
-      showModalHandler = {this.showModalHandler}
+      showModal={this.state.showModal === card.id}
+      showModalHandler = {() => this.showModalHandler(card.id)}
       hideModal = {this.hideModalHandler}
       answered={this.state.answered}
       answerButton={this.showAnswerHandler}
@@ -150,7 +163,7 @@ class App extends Component {
             {cards}
           </div>
 
-          <div className="column">
+          {/* <div className="column">
           <Card>200</Card>
           <Card>200</Card>
           <Card>200</Card>
@@ -180,7 +193,7 @@ class App extends Component {
           <Card>200</Card>
           <Card>200</Card>
           <Card>200</Card>
-          </div>
+          </div> */}
 
         </div>
 
