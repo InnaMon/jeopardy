@@ -11,39 +11,44 @@ class App extends Component {
         modalHeader: 'Mom: 100 pts',
         question: 'What is Moms favorite color?',
         answer: 'All shades of green',
-        id: 1
+        id: 1,
+        answered: false
       },
       {
         title: '200',
         modalHeader: 'Mom: 200 pts',
         question: 'What year did mom enrolls to NCC?',
         answer: '2008',
-        id: 2
+        id: 2,
+        answered: false
       },
       {
         title: '300',
         modalHeader: 'Mom: 300 pts',
         question: 'What are the names of grandparents that raised mom',
         answer: 'Grandma Polya and grandpa Peter',
-        id: 3
+        id: 3,
+        answered: false
       },
       {
         title: '400',
         modalHeader: 'Mom: 400 pts',
         question: 'Who did mom work as in Russia?',
         answer: 'Приома Здачя',
-        id: 4
+        id: 4,
+        answered: false
       },
       {
         title: '500',
         modalHeader: 'Mom: 500 pts',
         question: 'Mom’s favorite author/book?',
         answer: 'Кристина Рой Дорогой ценой',
-        id: 5
+        id: 5,
+        answered: false
       }
     ],
     showModal: 0,
-    answered: false,
+    // answered: false,
     showAnswer: false,
     timerTime: 60
   }
@@ -80,10 +85,21 @@ class App extends Component {
     console.log('close modal');
   }
 
-  showAnswerHandler = (e) => {
+  showAnswerHandler = (index, e) => {
+    // let answered = this.state.cards[index].answered;
+    console.log('answered?', this.state.cards[index].answered);
+    const { ...cardsArray } = this.state.cards;
+    // console.log('cards in answer handler', cards);
+    cardsArray[index].answered = true;
+    // let answered = true;
+    console.log('cards in answer handler', cardsArray[index].answered);
     e.stopPropagation();
     this.setState({
-      answered: true,
+      // answered: true,
+      // cards {
+      //   answered: true
+      // },
+      cardsArray,
       showAnswer: true,
       timerTime: 0
     })
@@ -120,11 +136,12 @@ class App extends Component {
       question={card.question}
       answer={card.answer}
       id={card.id} 
+      answered={card.answered}
       showModal={this.state.showModal === card.id}
       showModalHandler = {() => this.showModalHandler(card.id)}
       hideModal = {this.hideModalHandler}
-      answered={this.state.answered}
-      answerButton={this.showAnswerHandler}
+      // answered={this.state.answered}
+      answerButton={e => this.showAnswerHandler(i, e)}
       showAnswer={this.state.showAnswer}
       timerTime={this.state.timerTime}
       startTimer={this.startTimer}
