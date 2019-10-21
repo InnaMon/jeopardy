@@ -45,6 +45,166 @@ class App extends Component {
         answer: 'Кристина Рой Дорогой ценой',
         id: 5,
         answered: false
+      },
+      {
+        title: '100',
+        modalHeader: 'Dad: 100 pts',
+        question: 'What is Moms favorite color?',
+        answer: 'All shades of green',
+        id: 1,
+        answered: false
+      },
+      {
+        title: '200',
+        modalHeader: 'Dad: 200 pts',
+        question: 'What year did mom enrolls to NCC?',
+        answer: '2008',
+        id: 2,
+        answered: false
+      },
+      {
+        title: '300',
+        modalHeader: 'Dad: 300 pts',
+        question: 'What are the names of grandparents that raised mom',
+        answer: 'Grandma Polya and grandpa Peter',
+        id: 3,
+        answered: false
+      },
+      {
+        title: '400',
+        modalHeader: 'Dad: 400 pts',
+        question: 'Who did mom work as in Russia?',
+        answer: 'Приома Здачя',
+        id: 4,
+        answered: false
+      },
+      {
+        title: '500',
+        modalHeader: 'Dad: 500 pts',
+        question: 'Mom’s favorite author/book?',
+        answer: 'Кристина Рой Дорогой ценой',
+        id: 5,
+        answered: false
+      },
+      {
+        title: '100',
+        modalHeader: 'Lily: 100 pts',
+        question: 'What is Moms favorite color?',
+        answer: 'All shades of green',
+        id: 1,
+        answered: false
+      },
+      {
+        title: '200',
+        modalHeader: 'Lily: 200 pts',
+        question: 'What year did mom enrolls to NCC?',
+        answer: '2008',
+        id: 2,
+        answered: false
+      },
+      {
+        title: '300',
+        modalHeader: 'Lily: 300 pts',
+        question: 'What are the names of grandparents that raised mom',
+        answer: 'Grandma Polya and grandpa Peter',
+        id: 3,
+        answered: false
+      },
+      {
+        title: '400',
+        modalHeader: 'Lily: 400 pts',
+        question: 'Who did mom work as in Russia?',
+        answer: 'Приома Здачя',
+        id: 4,
+        answered: false
+      },
+      {
+        title: '500',
+        modalHeader: 'Lily: 500 pts',
+        question: 'Mom’s favorite author/book?',
+        answer: 'Кристина Рой Дорогой ценой',
+        id: 5,
+        answered: false
+      },
+      {
+        title: '100',
+        modalHeader: 'Wedding Bells: 100 pts',
+        question: 'What is Moms favorite color?',
+        answer: 'All shades of green',
+        id: 1,
+        answered: false
+      },
+      {
+        title: '200',
+        modalHeader: 'Wedding Bells: 200 pts',
+        question: 'What year did mom enrolls to NCC?',
+        answer: '2008',
+        id: 2,
+        answered: false
+      },
+      {
+        title: '300',
+        modalHeader: 'Wedding Bells: 300 pts',
+        question: 'What are the names of grandparents that raised mom',
+        answer: 'Grandma Polya and grandpa Peter',
+        id: 3,
+        answered: false
+      },
+      {
+        title: '400',
+        modalHeader: 'Wedding Bells: 400 pts',
+        question: 'Who did mom work as in Russia?',
+        answer: 'Приома Здачя',
+        id: 4,
+        answered: false
+      },
+      {
+        title: '500',
+        modalHeader: 'Wedding Bells: 500 pts',
+        question: 'Mom’s favorite author/book?',
+        answer: 'Кристина Рой Дорогой ценой',
+        id: 5,
+        answered: false
+      },
+      {
+        title: '100',
+        modalHeader: 'Random: 100 pts',
+        question: 'What is Moms favorite color?',
+        answer: 'All shades of green',
+        id: 1,
+        answered: false
+      },
+      {
+        title: '200',
+        modalHeader: 'Random: 200 pts',
+        question: 'What year did mom enrolls to NCC?',
+        answer: '2008',
+        id: 2,
+        answered: false
+      },
+      {
+        title: '300',
+        modalHeader: 'Random: 300 pts',
+        question: 'What are the names of grandparents that raised mom',
+        answer: 'Grandma Polya and grandpa Peter',
+        id: 3,
+        answered: false
+      },
+      {
+        title: '400',
+        modalHeader: 'Random: 400 pts',
+        question: 'Who did mom work as in Russia?',
+        answer: 'Приома Здачя',
+        id: 4,
+        answered: false
+      },
+      {
+        title: '500',
+        modalHeader: 'Random: 500 pts',
+        question: 'Mom’s favorite author/book?',
+        answer: 'Кристина Рой Дорогой ценой',
+        id: 5,
+        answered: false
       }
     ],
     showModal: 0,
@@ -66,12 +226,12 @@ class App extends Component {
   // }
 
   // shouldComponentUpdate ( nextProps, nextState ) {
-  //   return this.state.timerTime === nextState.timerTime;
+  //   return this.state.timerTime !== nextState.timerTime;
   // }
 
-  // componentDidUpdate () {
-  //   console.log('[App] DidUpdate');
-  // }
+  componentDidUpdate () {
+    console.log('[App] DidUpdate');
+  }
 
   showModalHandler = value => {
     this.setState({
@@ -151,7 +311,7 @@ class App extends Component {
           <Category>Mom</Category>
           <Category>Dad</Category>
           <Category>Lily</Category>
-          <Category>Name That Wedding</Category>
+          <Category>Wedding Bells</Category>
           <Category>Random</Category>
         </div>
 
@@ -195,64 +355,7 @@ class App extends Component {
 
         </div>
 
-        {/* <div className="row">
-          <Card handleModal={this.modalHandler} answered={this.state.answered}>
-            100
-            <div>
-            <Modal 
-              showModal={this.state.showModal} 
-              onClose={this.modalHandler} 
-              answerButton={this.showAnswerHandler}
-              showAnswer={this.state.showAnswer}
-              answer={<div>The answer is...</div>}
-              timerTime={this.state.timerTime}
-              startTimer={this.startTimer}
-            >
-              <>
-                <h2>Mom: 100 pts</h2>
-                <p>Question about murm.</p>
-              </>
-            </Modal>
-            </div>
-          </Card>
-
-          <Card
-              handleModal={this.modalHandler} 
-              answered={this.state.answered}
-              showModal={this.state.showModal} 
-              onClose={this.modalHandler} 
-              answerButton={this.showAnswerHandler}
-              showAnswer={this.state.showAnswer}
-              answer={<div>The answer is...</div>}
-              timerTime={this.state.timerTime}
-              startTimer={this.startTimer}
-              header={<h2>Dad: 100 pts</h2>}
-              question={<p>Question about dad.</p>}
-            >
-            100
-          </Card>
-
-          <Card>
-            100
-          </Card>
-
-          <Card>
-            100
-          </Card>
-
-          <Card>
-            100
-          </Card> 
-
-        </div> */}
-
-        {/* <div className="row">
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-        </div> */}
+        
       </div>
     );
   }

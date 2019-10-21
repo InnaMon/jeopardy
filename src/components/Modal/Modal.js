@@ -5,16 +5,20 @@ import './Modal.css'
 class Modal extends Component {
 
     // shouldComponentUpdate ( nextProps, nextState ) {
-    //     if (this.props.timerTime !== nextProps.timerTime ) {
-    //         return false;
-    //       } else {
-    //         return true;
-    //       }
-    //   }
+    //     if (this.props.cards === nextProps.cards &&
+    //         this.props.showModal === nextProps.showModal &&
+    //         this.props.answered === nextProps.answered &&
+    //         this.props.showAnswer === nextProps.showAnswer &&
+    //         this.props.timerTime !== nextProps.timerTime) {
+    //             return false;
+    //         } else {
+    //             return true;
+    //         }
+    // }
     
-    //   componentDidUpdate () {
-    //     console.log('[Modal] DidUpdate');
-    //   }
+    // componentDidUpdate () {
+    // console.log('[Modal] DidUpdate');
+    // }
 
     render() {
         console.log('Modal props', this.props)
