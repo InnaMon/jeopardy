@@ -65,6 +65,10 @@ class App extends Component {
   //     }
   // }
 
+  // shouldComponentUpdate ( nextProps, nextState ) {
+  //   return this.state.timerTime === nextState.timerTime;
+  // }
+
   // componentDidUpdate () {
   //   console.log('[App] DidUpdate');
   // }
@@ -81,24 +85,16 @@ class App extends Component {
     this.setState({
       showModal: 0
     });
-    // this.resetCountDown();
     console.log('close modal');
   }
 
   showAnswerHandler = (index, e) => {
-    // let answered = this.state.cards[index].answered;
     console.log('answered?', this.state.cards[index].answered);
     const { ...cardsArray } = this.state.cards;
-    // console.log('cards in answer handler', cards);
     cardsArray[index].answered = true;
-    // let answered = true;
     console.log('cards in answer handler', cardsArray[index].answered);
     e.stopPropagation();
     this.setState({
-      // answered: true,
-      // cards {
-      //   answered: true
-      // },
       cardsArray,
       showAnswer: true,
       timerTime: 0
@@ -140,7 +136,6 @@ class App extends Component {
       showModal={this.state.showModal === card.id}
       showModalHandler = {() => this.showModalHandler(card.id)}
       hideModal = {this.hideModalHandler}
-      // answered={this.state.answered}
       answerButton={e => this.showAnswerHandler(i, e)}
       showAnswer={this.state.showAnswer}
       timerTime={this.state.timerTime}
