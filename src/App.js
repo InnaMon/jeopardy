@@ -306,37 +306,38 @@ class App extends Component {
     // })
 
     return (
-      <div className="App">
+      <div className="container">
         <h1>Monjoseph Family Jeopardy!!!</h1>
+        <div  className="row">
 
-        <div className="row">
-          <Category>Mom</Category>
-          <Category>Dad</Category>
-          <Category>Lily</Category>
-          <Category>Wedding Bells</Category>
-          <Category>Random</Category>
-        </div>
+          <div className="customRow">
+            <Category>Mom</Category>
+            <Category>Dad</Category>
+            <Category>Lily</Category>
+            <Category>Wedding Bells</Category>
+            <Category>Random</Category>
+          </div>
 
-        <div className="column">
-          <Card 
-          cards={this.state.cards}
-          showModal={this.state.showModal}
-          showAnswer={this.state.showAnswer}
-          timerTime={this.state.timerTime}
-          showModalHandler = {this.showModalHandler}
-          hideModal = {this.hideModalHandler}
-          answerButton={this.showAnswerHandler}
-          startTimer={this.startTimer}
-          />
-        </div>
+          <div className="customColumn">
+            <Card 
+            cards={this.state.cards}
+            showModal={this.state.showModal}
+            showAnswer={this.state.showAnswer}
+            timerTime={this.state.timerTime}
+            showModalHandler = {this.showModalHandler}
+            hideModal = {this.hideModalHandler}
+            answerButton={this.showAnswerHandler}
+            startTimer={this.startTimer}
+            />
+          </div>
 
-          {/* <div className="column">
-            {cards}
-          </div> */}
-        
+        </div> 
       </div>
     );
   }
 }
 
 export default App;
+
+//refactor code to handle the showAnswer  handler within each individial card item 
+// instead of as a global variable availbe to all items

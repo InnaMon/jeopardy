@@ -24,7 +24,7 @@ class Card extends Component {
                     // timerTime={this.state.timerTime}
                     // startTimer={this.startTimer}
 
-                    className={"card " + (!card.answered ? "notAnsweredCard" : "answeredCard")} 
+                    className={"col-md-5 card " + (!card.answered ? "notAnsweredCard" : "answeredCard")} 
                     onClick={() => this.props.showModalHandler(card.id)}
                     >
                     <p>{card.title}</p>
@@ -45,7 +45,7 @@ class Card extends Component {
             )
         })
         return (
-            <div> 
+            <div className="row"> 
             {cardItems}
             </div>
         )
