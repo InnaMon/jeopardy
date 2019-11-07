@@ -46,7 +46,7 @@ class Modal extends Component {
             </div>
 
             <div className="button">
-                <button className="closeButton" onClick={e => this.props.hideModal(e)}>Close</button>
+                <button className="closeButton" onClick={this.props.hideModal}>Close</button>
                 <button className="answerButton" onClick={this.props.answerButton}>Answer</button>
             </div>
 

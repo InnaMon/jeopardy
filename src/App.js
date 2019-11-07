@@ -241,7 +241,7 @@ class App extends Component {
   }
 
   hideModalHandler = e => {
-    e.stopPropagation()
+    e.stopPropagation() //stops the bubble phase of event propogation 
     this.setState({
       showModal: 0
     });
@@ -282,26 +282,28 @@ class App extends Component {
   // RESOURCES: https://stackoverflow.com/questions/54276832/react-how-to-display-a-modal-popup-only-for-that-specific-div
 
   render() {
+    console.log('card state', this.state); 
 
-    const cards = this.state.cards.map((card, i) => {
-      console.log('card', card);
-      return <Card
-      key={i}
-      title={card.title}
-      modalHeader={card.modalHeader}
-      question={card.question}
-      answer={card.answer}
-      id={card.id} 
-      answered={card.answered}
-      showModal={this.state.showModal === card.id}
-      showModalHandler = {() => this.showModalHandler(card.id)}
-      hideModal = {this.hideModalHandler}
-      answerButton={e => this.showAnswerHandler(i, e)}
-      showAnswer={this.state.showAnswer}
-      timerTime={this.state.timerTime}
-      startTimer={this.startTimer}
-      />
-    })
+    // const cards = this.state.cards.map((card, i) => {
+    //   console.log('card', card);
+    //   return <Card
+    //   key={i}
+    //   title={card.title}
+    //   modalHeader={card.modalHeader}
+    //   question={card.question}
+    //   answer={card.answer}
+    //   id={card.id} 
+    //   answered={card.answered}
+
+    //   showModal={this.state.showModal === card.id}
+    //   showModalHandler = {() => this.showModalHandler(card.id)}
+    //   hideModal = {this.hideModalHandler}
+    //   answerButton={e => this.showAnswerHandler(i, e)}
+    //   showAnswer={this.state.showAnswer}
+    //   timerTime={this.state.timerTime}
+    //   startTimer={this.startTimer}
+    //   />
+    // })
 
     return (
       <div className="App">
@@ -315,46 +317,22 @@ class App extends Component {
           <Category>Random</Category>
         </div>
 
-        <div className="row">
-
-          <div className="column">
-            {cards}
-          </div>
-
-          {/* <div className="column">
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          </div>
-
-          <div className="column">
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          </div>
-
-          <div className="column">
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          </div>
-          
-          <div className="column">
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          <Card>200</Card>
-          </div> */}
-
+        <div className="column">
+          <Card 
+          cards={this.state.cards}
+          showModal={this.state.showModal}
+          showAnswer={this.state.showAnswer}
+          timerTime={this.state.timerTime}
+          showModalHandler = {this.showModalHandler}
+          hideModal = {this.hideModalHandler}
+          answerButton={this.showAnswerHandler}
+          startTimer={this.startTimer}
+          />
         </div>
 
+          {/* <div className="column">
+            {cards}
+          </div> */}
         
       </div>
     );
