@@ -7,12 +7,12 @@ class Timer extends Component {
     }
     
     componentDidUpdate () {
-        console.log('[Card] DidUpdate');
+        console.log('[Timer] DidUpdate');
     }
 
     render() {
         return (
-            <div className="Timer" startTimer={this.props.startTimer()}>{this.props.timerTime} seconds</div>
+            <div className="Timer" starttimer={this.props.starttimer()}>{this.props.timerTime} seconds</div>
         )
     }
 }

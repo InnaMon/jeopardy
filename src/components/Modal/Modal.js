@@ -4,7 +4,7 @@ import './Modal.css'
 
 class Modal extends Component {
     render() {
-        console.log('Modal props', this.props)
+        console.log('Modal props')
 
         let answer = null;
         if(this.props.showAnswer) {
@@ -25,7 +25,7 @@ class Modal extends Component {
             </div>
             
             <div className="timer">
-                <Timer startTimer={this.props.startTimer} timerTime={this.props.timerTime}/>
+                <Timer starttimer={this.props.starttimer} timerTime={this.props.timerTime}/>
             </div>
 
             <div className="button">

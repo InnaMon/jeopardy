@@ -9,7 +9,6 @@ class Card extends Component {
     }
 
     render() {
-        console.log('card comp props', this.props.cards);
         const cardItems = this.props.cards.map((card, i) => {
             return (
                 <div 
@@ -28,7 +27,7 @@ class Card extends Component {
                     hideModal = {(e) => this.props.hideModal(e, i)}
                     answerButton={(e) => this.props.showAnswerHandler(e, i)}
                     timerTime={this.props.timerTime}
-                    startTimer={this.props.startTimer}
+                    starttimer={this.props.starttimer}
                     >
                     </Modal>
                 </div>

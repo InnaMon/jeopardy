@@ -25,6 +25,11 @@ body, html {
   font-size: 1.4em;
 }
 
+body {
+  width: 100%;
+  margin: auto;
+}
+
 h1 {
   font-family: 'Toony Medium';
   font-size: 2em;
@@ -41,6 +46,8 @@ h1 {
 .container-fluid {
   background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   height: 100vh;
+  width: 99vw;
+  margin: auto;
 }
 
 .categories {

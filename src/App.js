@@ -214,8 +214,6 @@ class App extends Component {
         id: 21,
         answered: false,
         showModal: 0,
-        showAnswer: false,
-        showModal: 0,
         showAnswer: false
       },
       {
@@ -264,15 +262,15 @@ class App extends Component {
 
   // shouldComponentUpdate ( nextProps, nextState ) {
   //   if (this.state.cards === nextState.cards &&
-  //     this.state.showModal === nextState.showModal &&
-  //     this.state.answered === nextState.answered &&
-  //     this.state.showAnswer === nextState.showAnswer &&
   //     this.state.timerTime !== nextState.timerTime) {
   //       return false;
   //     } else {
   //       return true;
   //     }
   // }
+
+  // https://www.freecodecamp.org/news/how-to-identify-and-resolve-wasted-renders-in-react-cc4b1e910d10/
+  // GOOGLE SEARCH: 'how to render only part of react app that updates state'
 
   // shouldComponentUpdate ( nextProps, nextState ) {
   //   return this.state.timerTime !== nextState.timerTime;
@@ -308,7 +306,6 @@ class App extends Component {
     const { ...cardsArray } = this.state.cards;
     cardsArray[index].answered = true;
     cardsArray[index].showAnswer = true;
-    console.log('cards in answer handler', cardsArray[index].answered);
     this.setState({
       cardsArray,
       timerTime: 0
@@ -332,12 +329,10 @@ class App extends Component {
     this.setState({timerTime: 60})
   }
 
-  // TO DO: assess this code https://codesandbox.io/s/pkjvy72mw0
+  // MODAL RESOURCE: assess this code https://codesandbox.io/s/pkjvy72mw0
   // RESOURCES: https://stackoverflow.com/questions/54276832/react-how-to-display-a-modal-popup-only-for-that-specific-div
 
   render() {
-    console.log('card state', this.state); 
-
     return (
       <div className="container-fluid">
         <div className="row">
@@ -354,13 +349,11 @@ class App extends Component {
           <div className="col-md-12 cards">
             <Card 
             cards={this.state.cards}
-            showModal={this.state.showModal}
-            showAnswer={this.state.showAnswer}
-            timerTime={this.state.timerTime}
             showModalHandler = {this.showModalHandler}
             hideModal = {this.hideModalHandler}
             showAnswerHandler={this.showAnswerHandler}
-            startTimer={this.startTimer}
+            starttimer={this.startTimer}
+            timerTime={this.state.timerTime}
             />
           </div>
       

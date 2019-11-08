@@ -5,7 +5,7 @@
     margin: 10px 20px;
     border-radius: 10px;
     width: 17%;
-    height: 100px;
+    height: 100%;
     text-align: center;
     padding-top: 20px;
     box-sizing: border-box;
@@ -18,8 +18,8 @@
 }
 
 .notAnsweredCard {
-    background-color: #ff0066;
-    border: 3px solid #990033;
+    background-color: #2d5bb9;
+    border: 3px solid #99b3e6;
 }
 
 .row {
