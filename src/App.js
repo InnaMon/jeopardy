@@ -311,7 +311,6 @@ class App extends Component {
     console.log('cards in answer handler', cardsArray[index].answered);
     this.setState({
       cardsArray,
-      // showAnswer: true,
       timerTime: 0
     })
   }
@@ -338,27 +337,6 @@ class App extends Component {
 
   render() {
     console.log('card state', this.state); 
-
-    // const cards = this.state.cards.map((card, i) => {
-    //   console.log('card', card);
-    //   return <Card
-    //   key={i}
-    //   title={card.title}
-    //   modalHeader={card.modalHeader}
-    //   question={card.question}
-    //   answer={card.answer}
-    //   id={card.id} 
-    //   answered={card.answered}
-
-    //   showModal={this.state.showModal === card.id}
-    //   showModalHandler = {() => this.showModalHandler(card.id)}
-    //   hideModal = {this.hideModalHandler}
-    //   answerButton={e => this.showAnswerHandler(i, e)}
-    //   showAnswer={this.state.showAnswer}
-    //   timerTime={this.state.timerTime}
-    //   startTimer={this.startTimer}
-    //   />
-    // })
 
     return (
       <div className="container-fluid">
@@ -393,6 +371,3 @@ class App extends Component {
 }
 
 export default App;
-
-//refactor code to handle the showAnswer  handler within each individial card item 
-// instead of as a global variable availbe to all items

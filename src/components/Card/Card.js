@@ -15,23 +15,12 @@ class Card extends Component {
                 <div 
                     key={i}
                     id={card.id} 
-
-                    // showModal={this.props.showModal === card.id}
-
-                    // hideModal = {this.hideModalHandler}
-                    // answerButton={e => this.showAnswerHandler(i, e)}
-                    // showAnswer={this.state.showAnswer}
-                    // timerTime={this.state.timerTime}
-                    // startTimer={this.startTimer}
-
                     className={"col-md-2 card " + (!card.answered ? "notAnsweredCard" : "answeredCard")} 
                     onClick={() => this.props.showModalHandler(i, card.id)}
                     >
                     <p>{card.title}</p>
                     <Modal 
-                    // {...this.props}
                     showAnswer={card.showAnswer}
-                    // answered={card.answered}
                     showModal={card.showModal === card.id}
                     modalHeader={card.modalHeader}
                     question={card.question}
@@ -52,26 +41,5 @@ class Card extends Component {
         )
     }
 }
-
-// class Card extends Component {
-    
-//     componentDidUpdate () {
-//     console.log('[Card] DidUpdate');
-//     }
-
-//     render() {
-//         console.log('card comp props', this.props);
-//         return (
-//             <div 
-//             className={"card " + (!this.props.answered ? "notAnsweredCard" : "answeredCard")} 
-//             onClick={this.props.showModalHandler}
-//             >
-//             <p>{this.props.title}</p>
-//             <Modal {...this.props}>
-//             </Modal>
-//             </div>
-//         )
-//     }
-// }
 
 export default Card; 

@@ -43,13 +43,6 @@ h1 {
   height: 100vh;
 }
 
-.container {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-
 .categories {
   width: 100%;
   display: flex;
