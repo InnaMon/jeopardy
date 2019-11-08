@@ -12,7 +12,8 @@ class App extends Component {
         question: 'What is Moms favorite color?',
         answer: 'All shades of green',
         id: 1,
-        answered: false
+        answered: false,
+        showModal: 0
       },
       {
         title: '200',
@@ -20,7 +21,8 @@ class App extends Component {
         question: 'What year did mom enrolls to NCC?',
         answer: '2008',
         id: 2,
-        answered: false
+        answered: false,
+        showModal: 0
       },
       {
         title: '300',
@@ -28,7 +30,8 @@ class App extends Component {
         question: 'What are the names of grandparents that raised mom',
         answer: 'Grandma Polya and grandpa Peter',
         id: 3,
-        answered: false
+        answered: false,
+        showModal: 0
       },
       {
         title: '400',
@@ -36,7 +39,8 @@ class App extends Component {
         question: 'Who did mom work as in Russia?',
         answer: 'Приома Здачя',
         id: 4,
-        answered: false
+        answered: false,
+        showModal: 0
       },
       {
         title: '500',
@@ -44,7 +48,8 @@ class App extends Component {
         question: 'Mom’s favorite author/book?',
         answer: 'Кристина Рой Дорогой ценой',
         id: 5,
-        answered: false
+        answered: false,
+        showModal: 0
       },
       {
         title: '100',
@@ -207,7 +212,7 @@ class App extends Component {
         answered: false
       }
     ],
-    showModal: 0,
+    // showModal: 0,
     // answered: false,
     showAnswer: false,
     timerTime: 60
@@ -233,17 +238,22 @@ class App extends Component {
     console.log('[App] DidUpdate');
   }
 
-  showModalHandler = value => {
+  showModalHandler = (index, value) => {
+    const {...cardsArray } = this.state.cards;
+    cardsArray[index].showModal = value;
+    console.log('showModal', cardsArray[index].showModal);
     this.setState({
-      showModal: value
+      cardsArray
     });
     this.resetCountDown();
   }
 
-  hideModalHandler = e => {
+  hideModalHandler = (e, index) => {
     e.stopPropagation() //stops the bubble phase of event propogation 
+    const {...cardsArray} = this.state.cards;
+    cardsArray[index].showModal = 0;
     this.setState({
-      showModal: 0
+      cardsArray
     });
     console.log('close modal');
   }

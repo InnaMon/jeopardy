@@ -25,17 +25,17 @@ class Card extends Component {
                     // startTimer={this.startTimer}
 
                     className={"col-md-2 card " + (!card.answered ? "notAnsweredCard" : "answeredCard")} 
-                    onClick={() => this.props.showModalHandler(card.id)}
+                    onClick={() => this.props.showModalHandler(i, card.id)}
                     >
                     <p>{card.title}</p>
                     <Modal 
                     // {...this.props}
                     showAnswer={this.props.showAnswer}
-                    showModal={this.props.showModal === card.id}
+                    showModal={card.showModal === card.id}
                     modalHeader={card.modalHeader}
                     question={card.question}
                     answer={card.answer}
-                    hideModal = {(e) => this.props.hideModal(e, card.id)}
+                    hideModal = {(e) => this.props.hideModal(e, i)}
                     answerButton={(e) => this.showAnswerHandler(i, e)}
                     timerTime={this.props.timerTime}
                     startTimer={this.props.startTimer}
