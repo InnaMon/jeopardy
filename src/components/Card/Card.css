@@ -2,7 +2,7 @@
     font-size: 1.2em;
     color: white;
     cursor: pointer;
-    margin: 10px 20px;
+    margin: 8px 19px;
     border-radius: 10px;
     width: 17%;
     height: 100%;
@@ -20,9 +20,5 @@
 .notAnsweredCard {
     background-color: #2d5bb9;
     border: 3px solid #99b3e6;
-}
-
-.row {
-    margin: auto;
 }
 

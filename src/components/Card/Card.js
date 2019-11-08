@@ -34,7 +34,7 @@ class Card extends Component {
             )
         })
         return (
-            <div > 
+            <div className="row"> 
             {cardItems}
             </div>
         )
