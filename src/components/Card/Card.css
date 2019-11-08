@@ -1,19 +1,14 @@
 .card {
-    /* display: flex;
-    height: 4em;
-    flex: 1;
-    justify-content: center;
-    align-items: center; */
-    /* font-weight: lighter; */
     font-size: 1.2em;
     color: white;
     cursor: pointer;
-    margin: 10px;
+    margin: 20px;;
     border-radius: 10px;
+    width: 17%;
+    height: 100px;
+    text-align: center;
+    padding-top: 20px;
     box-sizing: border-box;
-    width: 18%;
-    height: 25%;
-    /* position: relative; */
 }
 
 .answeredCard {
@@ -25,3 +20,8 @@
     background-color: #ff0066;
     border: 3px solid #990033;
 }
+
+.row {
+    margin: auto;
+}
+

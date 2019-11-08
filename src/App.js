@@ -306,11 +306,11 @@ class App extends Component {
     // })
 
     return (
-      <div className="container">
+      <div className="container-fluid">
+        <div className="row">
         <h1>Monjoseph Family Jeopardy!!!</h1>
-        <div  className="row">
 
-          <div className="customRow">
+          <div className="col-md-12 categories">
             <Category>Mom</Category>
             <Category>Dad</Category>
             <Category>Lily</Category>
@@ -318,7 +318,7 @@ class App extends Component {
             <Category>Random</Category>
           </div>
 
-          <div className="customColumn">
+          <div className="col-md-12 cards">
             <Card 
             cards={this.state.cards}
             showModal={this.state.showModal}
@@ -330,8 +330,8 @@ class App extends Component {
             startTimer={this.startTimer}
             />
           </div>
-
-        </div> 
+      
+        </div>
       </div>
     );
   }
