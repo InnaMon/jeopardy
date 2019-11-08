@@ -13,7 +13,8 @@ class App extends Component {
         answer: 'All shades of green',
         id: 1,
         answered: false,
-        showModal: 0
+        showModal: 0,
+        showAnswer: false
       },
       {
         title: '200',
@@ -22,7 +23,8 @@ class App extends Component {
         answer: '2008',
         id: 2,
         answered: false,
-        showModal: 0
+        showModal: 0,
+        showAnswer: false
       },
       {
         title: '300',
@@ -31,7 +33,8 @@ class App extends Component {
         answer: 'Grandma Polya and grandpa Peter',
         id: 3,
         answered: false,
-        showModal: 0
+        showModal: 0,
+        showAnswer: false
       },
       {
         title: '400',
@@ -40,7 +43,8 @@ class App extends Component {
         answer: 'Приома Здачя',
         id: 4,
         answered: false,
-        showModal: 0
+        showModal: 0,
+        showAnswer: false
       },
       {
         title: '500',
@@ -49,7 +53,8 @@ class App extends Component {
         answer: 'Кристина Рой Дорогой ценой',
         id: 5,
         answered: false,
-        showModal: 0
+        showModal: 0,
+        showAnswer: false
       },
       {
         title: '100',
@@ -214,7 +219,7 @@ class App extends Component {
     ],
     // showModal: 0,
     // answered: false,
-    showAnswer: false,
+    // showAnswer: false,
     timerTime: 60
   }
 
@@ -258,15 +263,16 @@ class App extends Component {
     console.log('close modal');
   }
 
-  showAnswerHandler = (index, e) => {
+  showAnswerHandler = (e, index) => {
+    e.stopPropagation();
     console.log('answered?', this.state.cards[index].answered);
     const { ...cardsArray } = this.state.cards;
     cardsArray[index].answered = true;
+    cardsArray[index].showAnswer = true;
     console.log('cards in answer handler', cardsArray[index].answered);
-    e.stopPropagation();
     this.setState({
       cardsArray,
-      showAnswer: true,
+      // showAnswer: true,
       timerTime: 0
     })
   }
@@ -336,7 +342,7 @@ class App extends Component {
             timerTime={this.state.timerTime}
             showModalHandler = {this.showModalHandler}
             hideModal = {this.hideModalHandler}
-            answerButton={this.showAnswerHandler}
+            showAnswerHandler={this.showAnswerHandler}
             startTimer={this.startTimer}
             />
           </div>

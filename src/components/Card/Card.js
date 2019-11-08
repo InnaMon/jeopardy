@@ -30,13 +30,14 @@ class Card extends Component {
                     <p>{card.title}</p>
                     <Modal 
                     // {...this.props}
-                    showAnswer={this.props.showAnswer}
+                    showAnswer={card.showAnswer}
+                    // answered={card.answered}
                     showModal={card.showModal === card.id}
                     modalHeader={card.modalHeader}
                     question={card.question}
                     answer={card.answer}
                     hideModal = {(e) => this.props.hideModal(e, i)}
-                    answerButton={(e) => this.showAnswerHandler(i, e)}
+                    answerButton={(e) => this.props.showAnswerHandler(e, i)}
                     timerTime={this.props.timerTime}
                     startTimer={this.props.startTimer}
                     >
