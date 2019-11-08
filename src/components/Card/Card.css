@@ -14,6 +14,7 @@
 .answeredCard {
     background-color: #808080;
     border: 3px solid black;
+    cursor: not-allowed;
 }
 
 .notAnsweredCard {
