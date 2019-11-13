@@ -2,13 +2,9 @@
     font-size: 1.2em;
     color: white;
     cursor: pointer;
-    /* margin: 8px 16px; */
-    /* margin: 10px 20px; */
-    /* margin: 1%; */
-    margin: 0.5rem 0.7rem;
-    /* margin: 10px 16px; */
+    /* margin: 10pt 10pt; */
     border-radius: 10px;
-    width: 17%;
+    width: 19%;
     height: 100%;
     text-align: center;
     padding-top: 20px;
@@ -33,6 +29,6 @@
 } */
 
 .card-row {
-    padding: 0 20px;
-    margin: auto;
+    /* padding-left: 10px;  */
+    margin-left: 60px;
 }
