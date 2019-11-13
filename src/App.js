@@ -364,3 +364,5 @@ class App extends Component {
 }
 
 export default App;
+
+//TO DO: make sure background is frozen when modal is displayed

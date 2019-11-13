@@ -2,7 +2,11 @@
     font-size: 1.2em;
     color: white;
     cursor: pointer;
-    margin: 8px 19px;
+    /* margin: 8px 16px; */
+    /* margin: 10px 20px; */
+    /* margin: 1%; */
+    margin: 0.5rem 0.7rem;
+    /* margin: 10px 16px; */
     border-radius: 10px;
     width: 17%;
     height: 100%;
@@ -15,10 +19,20 @@
     background-color: #808080;
     border: 3px solid black;
     cursor: not-allowed;
+    box-sizing: border-box;
 }
 
 .notAnsweredCard {
     background-color: #2d5bb9;
     border: 3px solid #99b3e6;
+    box-sizing: border-box;
 }
 
+/* .col-md-2 {
+    padding: 0px;
+} */
+
+.card-row {
+    padding: 0 20px;
+    margin: auto;
+}
