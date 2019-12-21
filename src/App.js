@@ -8,9 +8,9 @@ class App extends Component {
     cards: [
       {
         title: '100',
-        modalHeader: 'Mom: 100 pts',
-        question: 'What is Moms favorite color',
-        answer: 'All shades of green',
+        modalHeader: 'Around the World: 100 pts',
+        question: 'What country started the tradition of Christmas trees',
+        answer: 'Germany',
         id: 1,
         answered: false,
         showModal: 0,
@@ -18,9 +18,9 @@ class App extends Component {
       },
       {
         title: '100',
-        modalHeader: 'Dad: 100 pts',
-        question: 'Which city was dad born in',
-        answer: 'Midvodi',
+        modalHeader: 'Bible: 100 pts',
+        question: 'How many angels spoke to the shepherds',
+        answer: 'One',
         id: 2,
         answered: false,
         showModal: 0,
@@ -28,9 +28,9 @@ class App extends Component {
       },
       {
         title: '100',
-        modalHeader: 'Lily: 100 pts',
-        question: 'What origin is the name Lily',
-        answer: 'Old English and Latin',
+        modalHeader: 'Russian: 100 pts',
+        question: 'What do the children have to do for Ded Moroz and Snegurochka to show up',
+        answer: 'Hold hands with each other and stand around the Christmas tree',
         id: 3,
         answered: false,
         showModal: 0,
@@ -38,9 +38,9 @@ class App extends Component {
       },
       {
         title: '100',
-        modalHeader: 'Wedding Bells: 100 pts',
-        question: 'What is the most popular wedding month',
-        answer: 'June',
+        modalHeader: 'American: 100 pts',
+        question: 'What are Christmas songs called',
+        answer: 'Carols',
         id: 4,
         answered: false,
         showModal: 0,
@@ -48,9 +48,9 @@ class App extends Component {
       },
       {
         title: '100',
-        modalHeader: 'Random: 100 pts',
-        question: 'Name the largest freshwater lake in the world',
-        answer: 'Lake Superior',
+        modalHeader: 'Santa: 100 pts',
+        question: 'What is the American-English name for Santa',
+        answer: 'Kris Kringle',
         id: 5,
         answered: false,
         showModal: 0,
@@ -58,9 +58,9 @@ class App extends Component {
       },
       {
         title: '200',
-        modalHeader: 'Mom: 200 pts',
-        question: 'What year did mom enrolls to NCC',
-        answer: '2008',
+        modalHeader: 'Around the World: 200 pts',
+        question: 'In which country is Christmas a romantic holiday typically celebrated by couples',
+        answer: 'Japan',
         id: 6,
         answered: false,
         showModal: 0,
@@ -68,9 +68,9 @@ class App extends Component {
       },
       {
         title: '200',
-        modalHeader: 'Dad: 200 pts',
-        question: 'Where did dad serve in the military',
-        answer: 'Siberia (Taiga)',
+        modalHeader: 'Bible: 200 pts',
+        question: 'Who was the prophet that foretold a virgin shall give birth to a son called Immanuel',
+        answer: 'Isaiah',
         id: 7,
         answered: false,
         showModal: 0,
@@ -78,9 +78,9 @@ class App extends Component {
       },
       {
         title: '200',
-        modalHeader: 'Lily: 200 pts',
-        question: 'Which famous nurse was known as “The Lady Of The Lamp” during the crimean war',
-        answer: 'Florence Nightingale',
+        modalHeader: 'Russian: 200 pts',
+        question: 'What does Ded Maroz carry with him',
+        answer: 'A staff',
         id: 8,
         answered: false,
         showModal: 0,
@@ -88,9 +88,9 @@ class App extends Component {
       },
       {
         title: '200',
-        modalHeader: 'Wedding Bells: 200 pts',
-        question: 'Most popular wedding destination',
-        answer: 'Las Vegas',
+        modalHeader: 'American: 200 pts',
+        question: 'What does the color red symbolize in relation to the traditional Christmas color',
+        answer: 'The blood of Jesus in the crucifixion',
         id: 9,
         answered: false,
         showModal: 0,
@@ -98,9 +98,9 @@ class App extends Component {
       },
       {
         title: '200',
-        modalHeader: 'Random: 200 pts',
-        question: 'What is the world’s longest river',
-        answer: 'Amazon',
+        modalHeader: 'Santa: 200 pts',
+        question: 'Santa is called Père Noël or Papa Noëlin in this country',
+        answer: 'France',
         id: 10,
         answered: false,
         showModal: 0,
@@ -108,9 +108,9 @@ class App extends Component {
       },
       {
         title: '300',
-        modalHeader: 'Mom: 300 pts',
-        question: 'What are the names of grandparents that raised mom',
-        answer: 'Grandma Polya and grandpa Peter',
+        modalHeader: 'Around the World: 300 pts',
+        question: 'In what country do children put their shoes on the windowsill so the Juletide Lads, the Santa Claus, can fill their shoes with little goodies',
+        answer: 'Iceland',
         id: 11,
         answered: false,
         showModal: 0,
@@ -118,9 +118,9 @@ class App extends Component {
       },
       {
         title: '300',
-        modalHeader: 'Dad: 300 pts',
-        question: 'Who did dad want to be when he was a kid',
-        answer: 'Driver',
+        modalHeader: 'Bible: 300 pts',
+        question: 'What was Jesus approximate age when the wise men presented Him with gifts',
+        answer: '2 years old',
         id: 12,
         answered: false,
         showModal: 0,
@@ -128,9 +128,9 @@ class App extends Component {
       },
       {
         title: '300',
-        modalHeader: 'Lily: 300 pts',
-        question: 'What climates do lilies grow the best',
-        answer: 'Tropical',
+        modalHeader: 'Russian: 300 pts',
+        question: 'How does Ded Moroz get around Russia',
+        answer: 'By taking a troika, a sleigh led by three horses',
         id: 13,
         answered: false,
         showModal: 0,
@@ -138,9 +138,9 @@ class App extends Component {
       },
       {
         title: '300',
-        modalHeader: 'Wedding Bells: 300 pts',
-        question: 'How much does an avergae engagment ring cost',
-        answer: '$6,163',
+        modalHeader: 'American: 300 pts',
+        question: 'Which country is the leading exporter of Christmas trees',
+        answer: 'Canada',
         id: 14,
         answered: false,
         showModal: 0,
@@ -148,9 +148,9 @@ class App extends Component {
       },
       {
         title: '300',
-        modalHeader: 'Random: 300 pts',
-        question: 'Name the world’s biggest island',
-        answer: 'Greenland',
+        modalHeader: 'Santa: 300 pts',
+        question: 'Santa is called Babbo Natale in this country',
+        answer: 'Italy',
         id: 15,
         answered: false,
         showModal: 0,
@@ -158,9 +158,9 @@ class App extends Component {
       },
       {
         title: '400',
-        modalHeader: 'Mom: 400 pts',
-        question: 'Who did mom work as in Russia',
-        answer: 'Приома Здачя',
+        modalHeader: 'Around the World: 400 pts',
+        question: 'In which country do Children receive gifts from the Befana(an imaginary, ugly, old lady who rides a broomstick through the air and is friends with Father Christmas)',
+        answer: 'Italy',
         id: 16,
         answered: false,
         showModal: 0,
@@ -168,9 +168,9 @@ class App extends Component {
       },
       {
         title: '400',
-        modalHeader: 'Dad: 400 pts',
-        question: 'How old was dad when he got his first motorcycle',
-        answer: '14',
+        modalHeader: 'Bible: 400 pts',
+        question: 'Which direction did the wise men travel to, going to Jerusalem',
+        answer: 'Westward',
         id: 17,
         answered: false,
         showModal: 0,
@@ -178,9 +178,9 @@ class App extends Component {
       },
       {
         title: '400',
-        modalHeader: 'Lily: 400 pts',
-        question: 'In England in 2011, Lily was the ___ most popular name for baby girls',
-        answer: '3rd',
+        modalHeader: 'Russian: 400 pts',
+        question: 'Russian Orthodox Christmas takes place on which day',
+        answer: 'January 7th',
         id: 18,
         answered: false,
         showModal: 0,
@@ -188,9 +188,9 @@ class App extends Component {
       },
       {
         title: '400',
-        modalHeader: 'Wedding Bells: 400 pts',
-        question: 'What year did Princess Diance and Prince Charles of Wales get married',
-        answer: '1981',
+        modalHeader: 'American: 400 pts',
+        question: 'What story inspired the gingerbread house',
+        answer: 'Hansel and gretel',
         id: 19,
         answered: false,
         showModal: 0,
@@ -198,9 +198,9 @@ class App extends Component {
       },
       {
         title: '400',
-        modalHeader: 'Random: 400 pts',
-        question: 'Which was the country that first made the use of paper money',
-        answer: 'China',
+        modalHeader: 'Santa: 400 pts',
+        question: 'Santa is called Święty Mikołaj (lit. Saint Nicholas) in this country',
+        answer: 'Poland',
         id: 20,
         answered: false,
         showModal: 0,
@@ -208,9 +208,9 @@ class App extends Component {
       },
       {
         title: '500',
-        modalHeader: 'Mom: 500 pts',
-        question: 'Mom’s favorite author/book',
-        answer: 'Кристина Рой Дорогой ценой',
+        modalHeader: 'Around the World: 500 pts',
+        question: 'What country holds the special tradition of having a Christmas lantern, which is called paról; the lantern is star-shaped, remembering the star of Bethlehem, and mainly made out of bamboo and paper',
+        answer: 'The Philippines',
         id: 21,
         answered: false,
         showModal: 0,
@@ -218,9 +218,9 @@ class App extends Component {
       },
       {
         title: '500',
-        modalHeader: 'Dad: 500 pts',
-        question: 'How many years did dad sing in the church choir in Russia',
-        answer: 'Six',
+        modalHeader: 'Bible: 500 pts',
+        question: 'When was the first Christmas celebrated after Jesus died',
+        answer: 'December 25th, 336 A.D.',
         id: 22,
         answered: false,
         showModal: 0,
@@ -228,9 +228,9 @@ class App extends Component {
       },
       {
         title: '500',
-        modalHeader: 'Lily: 500 pts',
-        question: 'What did the Greek associate Lilies with',
-        answer: 'Motherhood',
+        modalHeader: 'Russian: 500 pts',
+        question: 'Christmas trees were banned in Russia in what year',
+        answer: '1935',
         id: 23,
         answered: false,
         showModal: 0,
@@ -238,9 +238,9 @@ class App extends Component {
       },
       {
         title: '500',
-        modalHeader: 'Wedding Bells: 500 pts',
-        question: ' How many times was Elizabeth Taylor married',
-        answer: 'Eight',
+        modalHeader: 'American: 500 pts',
+        question: 'What does the world NOEL mean',
+        answer: 'Birth',
         id: 24,
         answered: false,
         showModal: 0,
@@ -248,9 +248,9 @@ class App extends Component {
       }, 
       {
         title: '500',
-        modalHeader: 'Random: 500 pts',
-        question: 'Define Nomophobia',
-        answer: 'The phobia is characterized by feelings of anxiety that arise from being out of a phone’s range of service, not having one’s phone charged, having no credit on one’s phone or misplacing it.',
+        modalHeader: 'Santa: 500 pts',
+        question: 'Santa is called  Noel Baba in this country',
+        answer: 'Turkey',
         id: 25,
         answered: false,
         showModal: 0,
@@ -336,14 +336,14 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-        <h1>Monjoseph Family Jeopardy!!!</h1>
+        <h1>Christmas Jeopardy!!!</h1>
 
           <div className="col-md-12 categories">
-            <Category>Mom</Category>
-            <Category>Dad</Category>
-            <Category>Lily</Category>
-            <Category>Wedding Bells</Category>
-            <Category>Random</Category>
+            <Category>Around the World</Category>
+            <Category>Bible</Category>
+            <Category>Russian</Category>
+            <Category>American</Category>
+            <Category>Santa</Category>
           </div>
 
           <div className="col-md-12 cards">
