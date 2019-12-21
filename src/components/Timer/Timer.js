@@ -17,10 +17,4 @@ class Timer extends Component {
     }
 }
 
-// const Timer = (props) => {
-//     return (
-//         <div className="Timer" startTimer={props.startTimer()}>{props.timerTime} seconds</div>
-//     )
-// }
-
 export default Timer; 

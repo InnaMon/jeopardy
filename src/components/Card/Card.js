@@ -14,7 +14,7 @@ class Card extends Component {
                 <div 
                     key={i}
                     id={card.id} 
-                    className={"col-md-2 card " + (!card.answered ? "notAnsweredCard" : "answeredCard")} 
+                    className={"col-md-2 card " + (!card.answered ? "notAnsweredRedCard" : "answeredCard")} 
                     onClick={() => this.props.showModalHandler(i, card.id)}
                     >
                     <p>{card.title}</p>

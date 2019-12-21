@@ -20,8 +20,8 @@ class Modal extends Component {
             </div>
 
             <div className="text">
-                <p><u>{this.props.question}?</u></p>
-                <p>{answer}</p>
+                <p>{this.props.question}<span>&#63;</span></p>
+                <p className="answer">{answer}</p>
             </div>
             
             <div className="timer">
