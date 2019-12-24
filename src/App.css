@@ -82,3 +82,7 @@ h1 {
   font-size: 1em;
   cursor: pointer;
 }
+
+.refresh-btn:hover {
+  background-color: #fc8403;
+}
