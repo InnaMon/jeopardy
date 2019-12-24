@@ -356,6 +356,10 @@ class App extends Component {
             timerTime={this.state.timerTime}
             />
           </div>
+
+          <div className="col-md-12">
+            <button className="refresh-btn" onClick={() => window.location.reload(false)}>Play Again!</button>
+          </div>
       
         </div>
       </div>

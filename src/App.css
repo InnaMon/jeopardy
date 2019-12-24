@@ -67,3 +67,18 @@ h1 {
 .row {
   padding: 0 80px;
 }
+
+.refresh-btn {
+  display: block;
+  height: 50px;
+  width: 120px;
+  background-color: orange;
+  border-radius: 20px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  font-family: 'Amatic SC Bold';
+  font-size: 1em;
+  cursor: pointer;
+}
