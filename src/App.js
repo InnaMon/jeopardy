@@ -8,9 +8,9 @@ class App extends Component {
     cards: [
       {
         title: '100',
-        modalHeader: 'Around the World: 100 pts',
-        question: 'What country started the tradition of Christmas trees',
-        answer: 'Germany',
+        modalHeader: 'Sports: 100 pts',
+        question: 'What the Europeans call association football, we call this',
+        answer: 'soccer',
         id: 1,
         answered: false,
         showModal: 0,
@@ -18,9 +18,9 @@ class App extends Component {
       },
       {
         title: '100',
-        modalHeader: 'Bible: 100 pts',
-        question: 'How many angels spoke to the shepherds',
-        answer: 'One',
+        modalHeader: 'Animals: 100 pts',
+        question: 'Its legs are 6 feet long & its neck can be even longer',
+        answer: 'a giraffe',
         id: 2,
         answered: false,
         showModal: 0,
@@ -28,9 +28,9 @@ class App extends Component {
       },
       {
         title: '100',
-        modalHeader: 'Russian: 100 pts',
-        question: 'What do the children have to do for Ded Moroz and Snegurochka to show up',
-        answer: 'Hold hands with each other and stand around the Christmas tree',
+        modalHeader: 'Science: 100 pts',
+        question: 'Isaac Newton published his first mathematical formulation for this fundamental force in 1687',
+        answer: 'gravity',
         id: 3,
         answered: false,
         showModal: 0,
@@ -38,9 +38,9 @@ class App extends Component {
       },
       {
         title: '100',
-        modalHeader: 'American: 100 pts',
-        question: 'What are Christmas songs called',
-        answer: 'Carols',
+        modalHeader: 'History: 100 pts',
+        question: 'The cargo of the Beaver, Eleanor & Dartmouth got dumped in this December 1773 incident',
+        answer: 'the Boston Tea Party',
         id: 4,
         answered: false,
         showModal: 0,
@@ -48,9 +48,9 @@ class App extends Component {
       },
       {
         title: '100',
-        modalHeader: 'Santa: 100 pts',
-        question: 'What is the American-English name for Santa',
-        answer: 'Kris Kringle',
+        modalHeader: 'People: 100 pts',
+        question: "On his 2011 passing Apple said, 'The world is immeasurably better because of' him",
+        answer: 'Steve Jobs',
         id: 5,
         answered: false,
         showModal: 0,
@@ -58,9 +58,9 @@ class App extends Component {
       },
       {
         title: '200',
-        modalHeader: 'Around the World: 200 pts',
-        question: 'In which country is Christmas a romantic holiday typically celebrated by couples',
-        answer: 'Japan',
+        modalHeader: 'Sports: 200 pts',
+        question: "Buster Douglas' 1990 knockout of this champ has been called the greatest heavyweight title upset",
+        answer: 'Mike Tyson',
         id: 6,
         answered: false,
         showModal: 0,
@@ -68,9 +68,9 @@ class App extends Component {
       },
       {
         title: '200',
-        modalHeader: 'Bible: 200 pts',
-        question: 'Who was the prophet that foretold a virgin shall give birth to a son called Immanuel',
-        answer: 'Isaiah',
+        modalHeader: 'Animals: 200 pts',
+        question: "In a children's tale, Jack traded one of these barnyard animals for some magic beans",
+        answer: 'cow',
         id: 7,
         answered: false,
         showModal: 0,
@@ -78,9 +78,9 @@ class App extends Component {
       },
       {
         title: '200',
-        modalHeader: 'Russian: 200 pts',
-        question: 'What does Ded Maroz carry with him',
-        answer: 'A staff',
+        modalHeader: 'Science: 200 pts',
+        question: 'By definition, this adjective describes certain organisms that can or must live in the absence of oxygen',
+        answer: 'anaerobic',
         id: 8,
         answered: false,
         showModal: 0,
@@ -88,9 +88,9 @@ class App extends Component {
       },
       {
         title: '200',
-        modalHeader: 'American: 200 pts',
-        question: 'What does the color red symbolize in relation to the traditional Christmas color',
-        answer: 'The blood of Jesus in the crucifixion',
+        modalHeader: 'History: 200 pts',
+        question: 'Napoleon & his troops captured Cairo in the 1798 battle of these landmarks',
+        answer: 'the Pyramids',
         id: 9,
         answered: false,
         showModal: 0,
@@ -98,9 +98,9 @@ class App extends Component {
       },
       {
         title: '200',
-        modalHeader: 'Santa: 200 pts',
-        question: 'Santa is called Père Noël or Papa Noëlin in this country',
-        answer: 'France',
+        modalHeader: 'People: 200 pts',
+        question: "This fashion designer created dresses worn in the movie 'Bride Wars' and in the TV series 'Gossip Girl'",
+        answer: 'Vera Wang',
         id: 10,
         answered: false,
         showModal: 0,
@@ -108,9 +108,9 @@ class App extends Component {
       },
       {
         title: '300',
-        modalHeader: 'Around the World: 300 pts',
-        question: 'In what country do children put their shoes on the windowsill so the Juletide Lads, the Santa Claus, can fill their shoes with little goodies',
-        answer: 'Iceland',
+        modalHeader: 'Sports: 300 pts',
+        question: "On April 13, 1997 this 21-year-old golfer became the youngest to win the Masters",
+        answer: 'Tiger Woods',
         id: 11,
         answered: false,
         showModal: 0,
@@ -118,9 +118,9 @@ class App extends Component {
       },
       {
         title: '300',
-        modalHeader: 'Bible: 300 pts',
-        question: 'What was Jesus approximate age when the wise men presented Him with gifts',
-        answer: '2 years old',
+        modalHeader: 'Animals: 300 pts',
+        question: 'The bulls of this tusked aquatic mammal also known as the morse may weigh over 3,000 pounds',
+        answer: 'the walrus',
         id: 12,
         answered: false,
         showModal: 0,
@@ -128,9 +128,9 @@ class App extends Component {
       },
       {
         title: '300',
-        modalHeader: 'Russian: 300 pts',
-        question: 'How does Ded Moroz get around Russia',
-        answer: 'By taking a troika, a sleigh led by three horses',
+        modalHeader: 'Science: 300 pts',
+        question: 'This name of the infectious disease caused by the Epstein-Barr virus comes from words meaning "one" & "kernel"',
+        answer: 'mononucleosis',
         id: 13,
         answered: false,
         showModal: 0,
@@ -138,9 +138,9 @@ class App extends Component {
       },
       {
         title: '300',
-        modalHeader: 'American: 300 pts',
-        question: 'Which country is the leading exporter of Christmas trees',
-        answer: 'Canada',
+        modalHeader: 'History: 300 pts',
+        question: 'In 1429, she was given control of troops in France',
+        answer: 'Joan of Arc',
         id: 14,
         answered: false,
         showModal: 0,
@@ -148,9 +148,9 @@ class App extends Component {
       },
       {
         title: '300',
-        modalHeader: 'Santa: 300 pts',
-        question: 'Santa is called Babbo Natale in this country',
-        answer: 'Italy',
+        modalHeader: 'People: 300 pts',
+        question: "In Feb. 2012 New Jersey's governor ordered flags be flown half-staff during the funeral of this Newark-born singer",
+        answer: 'Whitney Houston',
         id: 15,
         answered: false,
         showModal: 0,
@@ -158,9 +158,9 @@ class App extends Component {
       },
       {
         title: '400',
-        modalHeader: 'Around the World: 400 pts',
-        question: 'In which country do Children receive gifts from the Befana(an imaginary, ugly, old lady who rides a broomstick through the air and is friends with Father Christmas)',
-        answer: 'Italy',
+        modalHeader: 'Sports: 400 pts',
+        question: 'After winning 5 NBA championships, the Lakers moved to Los Angeles in 1960 from this city',
+        answer: 'Minneapolis',
         id: 16,
         answered: false,
         showModal: 0,
@@ -168,9 +168,9 @@ class App extends Component {
       },
       {
         title: '400',
-        modalHeader: 'Bible: 400 pts',
-        question: 'Which direction did the wise men travel to, going to Jerusalem',
-        answer: 'Westward',
+        modalHeader: 'Animals: 400 pts',
+        question: '"The Encyclopedia of Mammals" calls it the most heavily armored mammal alive today',
+        answer: 'armadillo',
         id: 17,
         answered: false,
         showModal: 0,
@@ -178,9 +178,9 @@ class App extends Component {
       },
       {
         title: '400',
-        modalHeader: 'Russian: 400 pts',
-        question: 'Russian Orthodox Christmas takes place on which day',
-        answer: 'January 7th',
+        modalHeader: 'Science: 400 pts',
+        question: 'In testing out gases by smelling them (not a good idea) Humphry Davy found in 1800 that this one made him feel giddy',
+        answer: 'nitrous oxide (or laughing gas)',
         id: 18,
         answered: false,
         showModal: 0,
@@ -188,9 +188,9 @@ class App extends Component {
       },
       {
         title: '400',
-        modalHeader: 'American: 400 pts',
-        question: 'What story inspired the gingerbread house',
-        answer: 'Hansel and gretel',
+        modalHeader: 'History: 400 pts',
+        question: "Tradition says this country's first emperor, Menelik I, was the son of King Solomon & the Queen of Sheba",
+        answer: 'Ethiopia',
         id: 19,
         answered: false,
         showModal: 0,
@@ -198,9 +198,9 @@ class App extends Component {
       },
       {
         title: '400',
-        modalHeader: 'Santa: 400 pts',
-        question: 'Santa is called Święty Mikołaj (lit. Saint Nicholas) in this country',
-        answer: 'Poland',
+        modalHeader: 'People: 400 pts',
+        question: "Visitors to the Sundance Film Festival know that the Sundance Institute was founded by this man in 1981",
+        answer: 'Robert Redford',
         id: 20,
         answered: false,
         showModal: 0,
@@ -208,9 +208,9 @@ class App extends Component {
       },
       {
         title: '500',
-        modalHeader: 'Around the World: 500 pts',
-        question: 'What country holds the special tradition of having a Christmas lantern, which is called paról; the lantern is star-shaped, remembering the star of Bethlehem, and mainly made out of bamboo and paper',
-        answer: 'The Philippines',
+        modalHeader: 'Sports: 500 pts',
+        question: 'On November 30, 1996 this Bulls player became the 10th in NBA history to reach 25,000 career points',
+        answer: 'Michael Jordan',
         id: 21,
         answered: false,
         showModal: 0,
@@ -218,9 +218,9 @@ class App extends Component {
       },
       {
         title: '500',
-        modalHeader: 'Bible: 500 pts',
-        question: 'When was the first Christmas celebrated after Jesus died',
-        answer: 'December 25th, 336 A.D.',
+        modalHeader: 'Animals: 500 pts',
+        question: 'Found chiefly in Australia, the wallaby is a smaller type of this marsupial',
+        answer: 'Kangaroo',
         id: 22,
         answered: false,
         showModal: 0,
@@ -228,9 +228,9 @@ class App extends Component {
       },
       {
         title: '500',
-        modalHeader: 'Russian: 500 pts',
-        question: 'Christmas trees were banned in Russia in what year',
-        answer: '1935',
+        modalHeader: 'Science: 500 pts',
+        question: 'Developed by Edward Jenner, the first true vaccine was designed to protect against this disease',
+        answer: 'Smallpox',
         id: 23,
         answered: false,
         showModal: 0,
@@ -238,9 +238,9 @@ class App extends Component {
       },
       {
         title: '500',
-        modalHeader: 'American: 500 pts',
-        question: 'What does the world NOEL mean',
-        answer: 'Birth',
+        modalHeader: 'History: 500 pts',
+        question: 'Circa 950, under Harald Bluetooth, this was 1st Scandinavian country unified under just 1 king',
+        answer: 'Denmark',
         id: 24,
         answered: false,
         showModal: 0,
@@ -248,9 +248,9 @@ class App extends Component {
       }, 
       {
         title: '500',
-        modalHeader: 'Santa: 500 pts',
-        question: 'Santa is called  Noel Baba in this country',
-        answer: 'Turkey',
+        modalHeader: 'People: 500 pts',
+        question: 'When he auctioned off his wacky wardrobe, his Pinball Wizard boots sold for over $20,000',
+        answer: 'Elton John',
         id: 25,
         answered: false,
         showModal: 0,
@@ -259,22 +259,6 @@ class App extends Component {
     ],
     timerTime: 60
   }
-
-  // shouldComponentUpdate ( nextProps, nextState ) {
-  //   if (this.state.cards === nextState.cards &&
-  //     this.state.timerTime !== nextState.timerTime) {
-  //       return false;
-  //     } else {
-  //       return true;
-  //     }
-  // }
-
-  // https://www.freecodecamp.org/news/how-to-identify-and-resolve-wasted-renders-in-react-cc4b1e910d10/
-  // GOOGLE SEARCH: 'how to render only part of react app that updates state'
-
-  // shouldComponentUpdate ( nextProps, nextState ) {
-  //   return this.state.timerTime !== nextState.timerTime;
-  // }
 
   componentDidUpdate () {
     console.log('[App] DidUpdate');
@@ -329,21 +313,18 @@ class App extends Component {
     this.setState({timerTime: 60})
   }
 
-  // MODAL RESOURCE: assess this code https://codesandbox.io/s/pkjvy72mw0
-  // RESOURCES: https://stackoverflow.com/questions/54276832/react-how-to-display-a-modal-popup-only-for-that-specific-div
-
   render() {
     return (
       <div className="container-fluid">
         <div className="row">
-        <h1>Christmas Jeopardy!!!</h1>
+        <h1>Jeopardy!!!</h1>
 
           <div className="col-md-12 categories">
-            <Category>Around the World</Category>
-            <Category>Bible</Category>
-            <Category>Russian</Category>
-            <Category>American</Category>
-            <Category>Santa</Category>
+            <Category>Sports</Category>
+            <Category>Animals</Category>
+            <Category>Science</Category>
+            <Category>History</Category>
+            <Category>People</Category>
           </div>
 
           <div className="col-md-12 cards">
