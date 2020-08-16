@@ -316,8 +316,12 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="row">
-        <h1>Jeopardy!!!</h1>
+        <div className="row header-bg">
+          <h1>Jeopardy!!!</h1>
+        </div>
+        
+        <div className="row row-padding">
+        
 
           <div className="col-md-12 categories">
             <Category>Sports</Category>

@@ -4,7 +4,9 @@
     flex-flow: row wrap;
     align-items: center;
     z-index: 500;
-    background-color: purple;
+    background: #DD5E89;  
+    background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89); 
+    background: linear-gradient(to right, #F7BB97, #DD5E89); 
     width: 70%;
     padding: 16px;
     left: 15%;
